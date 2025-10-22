@@ -126,11 +126,11 @@
                         <p class="text-center text-sm text-slate-500 mt-3 italic">Click an image to view full size.</p>
 
                         <!-- Screenshots -->
-                        <img onclick="openLightbox(this.src)" src="static/images/LargeScreen.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Desktop View">
-                        <img onclick="openLightbox(this.src)" src="static/images/SmallScreen.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Mobile View">
-                        <img onclick="openLightbox(this.src)" src="static/images/Breakdown.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Processing Breakdown">
-                        <img onclick="openLightbox(this.src)" src="static/images/Database.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Database View">
-                        <img onclick="openLightbox(this.src)" src="static/images/Labeling.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Labeling Interface">
+                        <img onclick="openLightbox(this.src)" src="static/images/project1/LargeScreen.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Desktop View">
+                        <img onclick="openLightbox(this.src)" src="static/images/project1/SmallScreen.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Mobile View">
+                        <img onclick="openLightbox(this.src)" src="static/images/project1/Breakdown.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Processing Breakdown">
+                        <img onclick="openLightbox(this.src)" src="static/images/project1/Database.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Database View">
+                        <img onclick="openLightbox(this.src)" src="static/images/project1/Labeling.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Labeling Interface">
                     </div>
 
                     <!-- Text Description on the Right (Revised) -->
@@ -221,69 +221,62 @@
                     </div>
                 </div>
 
-                <!-- Project 2: YOLO Inference Toolkit (Code-Focused Layout) -->
+                <!-- Project 2: YOLO Inference Toolkit -->
                 <div class="flex flex-col gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
                     
                     <!-- Text Description -->
                     <div>
                         <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Inference Toolkit</h3>
-                        <p class="mb-4 text-slate-700 text-justify">I developed this high-level Python toolkit to simplify and structure the process of running inference with <strong>Ultralytics YOLO</strong> models. By applying an <strong>object-oriented</strong> design, the toolkit abstracts away repetitive boilerplate code, allowing developers to focus on integrating AI into their applications rather than on the complexities of the underlying framework.</p>
+                        <p class="mb-4 text-slate-700 text-justify">I developed this <strong>open-source</strong> toolkit to solve a common problem for AI developers: the repetitive setup code and complexity of using the powerful <strong>Ultralytics YOLO</strong> framework. To simplify this, I built a set of intuitive, <strong>object-oriented</strong> Python classes that provide a clean and consistent workflow for every task. This lets developers get useful, ready-to-use data with a simple <strong>predict-then-decode</strong> process. The goal is to help developers move from idea to implementation much faster by focusing on their application, not the framework's internal details.</p>
                     </div>
 
-                    <!-- Core Design & Workflow -->
+                    <!-- Project Goals & Design Philosophy -->
                     <div class="mb-4">
-                        <h4 class="text-lg font-semibold mb-2 text-slate-800">Core Design & Workflow:</h4>
+                        <h4 class="text-lg font-semibold mb-2 text-slate-800">Project Goals & Design Philosophy:</h4>
+                        <ul class="list-disc list-inside text-slate-600 space-y-2">
+                            <li><strong>Simplify Developer Experience:</strong> Abstract away complex framework internals and provide a simple, intuitive API for common AI tasks.</li>
+                            <li><strong>Promote Code Reusability:</strong> Use an object-oriented inheritance structure to prevent code duplication and make the toolkit easy to extend.</li>
+                            <li><strong>Provide Predictable Data:</strong> Ensure all decode methods return simple, clean Python data structures (lists, tuples), not complex objects.</li>
+                            <li><strong>Ensure Versatility:</strong> Design a model-agnostic tool that works seamlessly for classification, detection, segmentation, and pose estimation.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Key Features & Architecture -->
+                    <div class="mb-4">
+                        <h4 class="text-lg font-semibold mb-2 text-slate-800">Key Features & Architecture:</h4>
                         <ul class="list-disc list-inside text-slate-600 space-y-3">
-                            <li>
-                                <strong>Object-Oriented Architecture:</strong> The toolkit is built around a parent <strong>YoloModel</strong> class, which provides core functionalities. Specialized child classes inherit from it for each specific task:
-                                <ul class="list-disc ml-8 mt-2 space-y-1 text-slate-500">
-                                    <li><strong>YoloDetection</strong> for object detection</li>
-                                    <li><strong>YoloClassification</strong> for image classification</li>
-                                    <li>And others for Segmentation and Pose Estimation...</li>
-                                </ul>
+                            <li class="text-justify">
+                                <strong>Model-Agnostic Design:</strong> Works with any model type supported by the Ultralytics framework, including classification, detection, segmentation, and pose estimation.
                             </li>
                             <li class="text-justify">
-                                <strong>Simplified "Load → Predict → Decode" Flow:</strong> The entire inference process—for both <strong>single images and batches</strong>—is streamlined into three intuitive steps. This pattern transforms raw model outputs into clean, human-readable Python data structures that are ready for immediate use.
+                                <strong>Simplified Data Output:</strong> All decode methods are designed to return simple Python data structures (lists and tuples), not complex framework objects, making the results immediately usable.
+                            </li>
+                            <li class="text-justify">
+                                <strong>Consistent "Predict → Decode" Pattern:</strong> The entire inference process is streamlined into two clear steps that work identically for both <strong>single images and batches</strong>.
+                            </li>
+                            <li class="text-justify">
+                                <strong>Specialized Task Capabilities:</strong> Includes ready-to-use methods for advanced tasks like stateful object tracking and utilities to easily extract detected or segmented objects from an image.
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Code Snippets Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Example 1: Classification -->
-                        <div>
-                            <h4 class="text-base font-semibold mb-2 text-slate-800">Example: Simplified Classification</h4>
-                            <div class="bg-slate-800 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto h-full">
-<pre><code><span class="text-sky-400"># 1. Initialize the model</span>
-yolo_model = YoloClassification("yolov8n-cls.pt")
-
-<span class="text-sky-400"># 2. Predict the image</span>
-raw_results = yolo_model.predict(image)
-
-<span class="text-sky-400"># 3. Decode for a clean output</span>
-class_name, score = yolo_model.decode_top1(raw_results)
-
-<span class="text-green-400">print</span>(f<span class="text-amber-400">"Class: {class_name}"</span>)
-<span class="text-gray-400"># > "goldfish"</span></code></pre>
-                            </div>
-                        </div>
-
-                        <!-- Example 2: Detection -->
-                        <div>
-                            <h4 class="text-base font-semibold mb-2 text-slate-800">Example: Simplified Detection</h4>
-                            <div class="bg-slate-800 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto h-full">
-<pre><code><span class="text-sky-400"># 1. Initialize the model</span>
-yolo_model = YoloDetection("yolov8n.pt")
-
-<span class="text-sky-400"># 2. Predict the image</span>
-raw_results = yolo_model.predict(image)
-
-<span class="text-sky-400"># 3. Decode for clean results</span>
-decoded_results = yolo_model.decode_results(raw_results)
-
-<span class="text-sky-400"># 4. Process the simple list</span>
-<span class="text-purple-400">for</span> box, score, name <span class="text-purple-400">in</span> decoded_results:
-<span class="text-green-400">print</span>(f<span class="text-amber-400">"Found: {name}"</span>)</code></pre>
+                    <!-- Visual Showcase -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2 text-slate-800">Visual Showcase:</h4>
+                        <div class="md:w-full flex flex-col">
+                            <p class="text-center text-sm text-slate-500 mb-3 italic">Click an image to view full size.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                
+                                <!-- IMPORTANT: Replace these src paths with your new JPEG images -->
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Classification-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Classification Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Classification-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Detection-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Detection-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Pose-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Pose-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Segmentation-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project2/Segmentation-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                            
                             </div>
                         </div>
                     </div>
@@ -294,18 +287,34 @@ decoded_results = yolo_model.decode_results(raw_results)
                             <a href="https://github.com/catptype/YOLO-Inference-Toolkit" class="text-base font-semibold text-blue-600 hover:text-blue-700 mr-4">View Project Details on Github</a>
                         </div>
                         
-                        <!-- Unified Tags -->
-                        <div class="flex flex-wrap gap-2">
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Object-Oriented Programming</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">API Design</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Developer Tool</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">YOLO</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Ultralytics</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">PyTorch</span>
+                        <!-- Unified Tags (Categorized) -->
+                        <div class="mt-4">
+                            
+                            <!-- Category: Tech Stack -->
+                            <div class="mb-4">
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Tech Stack</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Ultralytics</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Supervision</span>
+                                </div>
+                            </div>
+
+                            <!-- Category: Key Concepts & Techniques -->
+                            <div class="mb-4">
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Key Concepts & Techniques</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Object-Oriented Programming</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">API Design</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Developer Tool</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Software Architecture</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Open Source</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                </div>```
+                </div>
 
                 <!-- Project 3 -->
                 <!-- <div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
