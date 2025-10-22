@@ -28,7 +28,7 @@
 
 <body>
     <!-- Use &#8209; instead of '-' -->
-    <div class="max-w-5xl mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4">
         <!-- HEADER -->
         <header class="py-3 flex flex-row justify-between md:justify-start items-baseline gap-4 sticky top-0 z-20 bg-slate-50/80 backdrop-blur-md border-b border-slate-200">
             <a href="#" class="inline-block text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent hover:text-transparent font-lexend tracking-tight">
@@ -120,52 +120,54 @@
                 <!-- Project 1: Venus Sentinel ANPR Engine -->
                 <div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200 items-start">
                     
-                    <!-- Vertical Image Column on the Left -->
+                    <!-- Add an onclick event to each image -->
                     <div class="md:w-2/5 flex flex-col space-y-4">
-                        <img src="static/images/Webpage.png" class="object-cover w-full h-full rounded-lg shadow-md" alt="ANPR System Screenshot 1">
-                        <img src="static/images/Breakdown.png" class="object-cover w-full h-full rounded-lg shadow-md" alt="ANPR System Screenshot 2">
+                        <!-- The new hint text -->
+                        <p class="text-center text-sm text-slate-500 mt-3 italic">Click an image to view full size.</p>
+
+                        <!-- Screenshots -->
+                        <img onclick="openLightbox(this.src)" src="static/images/LargeScreen.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Desktop View">
+                        <img onclick="openLightbox(this.src)" src="static/images/SmallScreen.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Mobile View">
+                        <img onclick="openLightbox(this.src)" src="static/images/Breakdown.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Processing Breakdown">
+                        <img onclick="openLightbox(this.src)" src="static/images/Database.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Database View">
+                        <img onclick="openLightbox(this.src)" src="static/images/Labeling.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="ANPR Labeling Interface">
                     </div>
 
-                    <!-- Text Description on the Right -->
+                    <!-- Text Description on the Right (Revised) -->
                     <div class="flex-grow md:w-3/5">
-                        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">Real&#8209;time Vehicle Detection & License Plate Recognition System</h3>
-                        <!-- Justified paragraph for a "research paper" look -->
-                        <p class="mb-4 text-slate-700 text-justify">I developed the core AI engine and data collection system that evolved from an embedded prototype into a central component of a commercial security product. The system performs real-time vehicle analysis and Thai license plate recognition from live CCTV feeds.</p>
+                        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">Real‑time Vehicle Detection & License Plate Recognition System</h3>
+                        <p class="mb-4 text-slate-700 text-justify">During my role at company, I was the sole developer tasked with designing, building, and deploying the Automatic Number Plate Recognition (ANPR) system from the ground up. I was responsible for the <strong>entire project lifecycle</strong>, from initial data collection to its final integration as the core technology for a commercial security product. The system performs real‑time vehicle analysis and Thai license plate recognition from live CCTV feeds.</p>
+                        
+                        <!-- My Role & Responsibilities -->
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2 text-slate-800">My Role & Responsibilities:</h4>
+                            <ul class="list-disc list-inside text-slate-600 space-y-2">
+                                <li><strong>AI Development:</strong> Solved the data scarcity problem by building a custom dataset and training YOLO models for vehicle detection, classification, and OCR.</li>
+                                <li><strong>Full-Stack Engineering:</strong> Architected and developed the complete application, including a high-performance multi-threaded Python backend and a responsive Django-powered web UI.</li>
+                                <li><strong>End-to-End Deployment:</strong> Managed deployment across different environments, from an optimized edge prototype on a <strong>Raspberry Pi 5</strong> to a containerized production build for Linux servers.</li>
+                                <li><strong>CI/CD & Infrastructure:</strong> Established a <strong>GitLab CI/CD pipeline</strong> for automated Docker image builds and configured <strong>Nginx</strong> as a reverse proxy for pre-production testing.</li>
+                            </ul>
+                        </div>
 
-                        <!-- Technical Highlights -->
+                        <!-- Key Features & Architecture -->
                         <div class="mb-4">
                             <h4 class="text-lg font-semibold mb-2 text-slate-800">Key Features & Architecture:</h4>
                             <ul class="list-disc list-inside text-slate-600 space-y-3">
                                 <li class="text-justify">
-                                    <strong>Data Collection & Labeling Tool:</strong> The system has a <strong>Dataset Mode</strong> to help create better training data. In this mode, the system automatically saves all prediction results to a database. Then, the built&#8209;in web UI can be used to review, correct, and label the saved data. This process creates a clean, high quality dataset for future model training.
+                                    <strong>Integrated Data Labeling Workflow:</strong> To enable continuous model improvement, I built a "Dataset Mode" and a web UI to review, correct, and validate predictions, creating a powerful feedback loop for retraining.
                                 </li>
                                 <li>
-                                    <strong>High-Performance Multi-Threading:</strong>
+                                    <strong>High-Performance Multi-Threading:</strong> The backend pipeline is fully concurrent to ensure real-time performance without bottlenecks.
                                     <div class="mt-2 p-3 bg-slate-100 rounded-md text-sm text-slate-700 space-y-2">
                                         <div class="flex items-center"><span class="font-bold text-blue-600 w-6">1.</span> Video Capture (RTSP)</div>
                                         <div class="flex items-center"><span class="font-bold text-blue-600 w-6">2.</span> AI Inference & Processing</div>
-                                        <div class="flex items-center"><span class="font-bold text-blue-600 w-6">3.</span> Real&#8209;time Result Broadcasting (WebSockets)</div>
+                                        <div class="flex items-center"><span class="font-bold text-blue-600 w-6">3.</span> Real‑time Result Broadcasting (WebSockets)</div>
                                         <div class="flex items-center"><span class="font-bold text-blue-600 w-6">4.</span> System Health Monitoring (WebSockets)</div>
                                     </div>
                                 </li>
                                 <li class="text-justify">
-                                    <strong>Deployment Journey:</strong> The initial prototype was deployed on a <strong>Raspberry Pi</strong> (using NCNN for CPU optimization), while the production version is containerized with <strong>Docker</strong> for Linux servers.
+                                    <strong>Commercial Integration:</strong> The final application was architected for a dual role: providing a staff-only UI for configuration and serving detection data to the central <a href="https://bgs.co.th/venus-sentinel-ระบบไม้กั้นอัตโนมัติ/" class="font-semibold text-blue-600 hover:text-blue-700">Venus Sentinel</a> platform via a <strong>REST API</strong> to control automated gate barriers.
                                 </li>
-                            </ul>
-                        </div>
-
-                        <!-- Commercial Integration -->
-                        <div class="mb-4">
-                            <h4 class="text-lg font-semibold mb-2 text-slate-800">Commercial Integration:</h4>
-                            <ul class="list-disc list-inside text-slate-600 space-y-2">
-                                <li class="text-justify">This project enables key features in the <a href="https://bgs.co.th/venus-sentinel-ระบบไม้กั้นอัตโนมัติ/" class="text-base font-semibold text-blue-600 hover:text-blue-700">Venus Sentinel</a>, such as <strong>automated gate barrier access</strong> for registered vehicles.</li>
-                                <li class="text-justify">My application was architected for a dual role:
-                                    <ul class="list-disc ml-8 mt-2 space-y-1">
-                                        <li class="text-justify">It provides a <strong>staff&#8209;only web UI</strong> for system configuration.</li>
-                                        <li class="text-justify">Its backend was expanded to communicate detection data to the central platform via a <strong>REST API</strong>.</li>
-                                    </ul>
-                                </li>
-                                <li class="text-justify"><strong>A collaborative effort</strong>, developed in cooperation with team members from different company departments.</li>
                             </ul>
                         </div>
 
@@ -173,56 +175,86 @@
                             <a href="https://github.com/catptype/ANPR-Showcase" class="text-base font-semibold text-blue-600 hover:text-blue-700 mr-4">View Project Details on Github</a>
                         </div>
                         
-                        <!-- Unified Tags -->
-                        <div class="flex flex-wrap gap-2">
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Django</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">REST API</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">WebSockets</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">PyTorch</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">OpenCV</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Multi-threading</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Docker</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Redis</span>
-                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Raspberry Pi</span>
+                        <!-- Unified Tags (Categorized) -->
+                        <div class="mt-4">
+                            
+                            <!-- Category: Tech Stack -->
+                            <div class="mb-4">
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Tech Stack</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">PyTorch</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Django</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">OpenCV</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">HTML</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">CSS</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">JavaScript</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Bootstrap</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Redis</span>
+                                </div>
+                            </div>
+
+                            <!-- Category: Key Concepts & Techniques -->
+                            <div class="mb-4">
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Key Concepts & Techniques</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Full-Stack Development</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">RESTful API</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">WebSockets</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Multi-threading</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Edge Computing</span>
+                                </div>
+                            </div>
+
+                            <!-- Category: Deployment & Infrastructure -->
+                            <div>
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Deployment & Infrastructure</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-slate-200 text-slate-800 text-sm font-medium rounded-full">Docker</span>
+                                    <span class="py-1 px-3 bg-slate-200 text-slate-800 text-sm font-medium rounded-full">GitLab CI/CD</span>
+                                    <span class="py-1 px-3 bg-slate-200 text-slate-800 text-sm font-medium rounded-full">Nginx</span>
+                                    <span class="py-1 px-3 bg-slate-200 text-slate-800 text-sm font-medium rounded-full">Raspberry Pi</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
-<!-- Project 2: YOLO Inference Toolkit (Code-Focused Layout) -->
-<div class="flex flex-col gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
-    
-    <!-- Text Description -->
-    <div>
-        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Inference Toolkit</h3>
-        <p class="mb-4 text-slate-700 text-justify">I developed this high-level Python toolkit to simplify and structure the process of running inference with <strong>Ultralytics YOLO</strong> models. By applying an <strong>object-oriented</strong> design, the toolkit abstracts away repetitive boilerplate code, allowing developers to focus on integrating AI into their applications rather than on the complexities of the underlying framework.</p>
-    </div>
+                <!-- Project 2: YOLO Inference Toolkit (Code-Focused Layout) -->
+                <div class="flex flex-col gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
+                    
+                    <!-- Text Description -->
+                    <div>
+                        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Inference Toolkit</h3>
+                        <p class="mb-4 text-slate-700 text-justify">I developed this high-level Python toolkit to simplify and structure the process of running inference with <strong>Ultralytics YOLO</strong> models. By applying an <strong>object-oriented</strong> design, the toolkit abstracts away repetitive boilerplate code, allowing developers to focus on integrating AI into their applications rather than on the complexities of the underlying framework.</p>
+                    </div>
 
-    <!-- Core Design & Workflow -->
-    <div class="mb-4">
-        <h4 class="text-lg font-semibold mb-2 text-slate-800">Core Design & Workflow:</h4>
-        <ul class="list-disc list-inside text-slate-600 space-y-3">
-            <li>
-                <strong>Object-Oriented Architecture:</strong> The toolkit is built around a parent <strong>YoloModel</strong> class, which provides core functionalities. Specialized child classes inherit from it for each specific task:
-                <ul class="list-disc ml-8 mt-2 space-y-1 text-slate-500">
-                    <li><strong>YoloDetection</strong> for object detection</li>
-                    <li><strong>YoloClassification</strong> for image classification</li>
-                    <li>And others for Segmentation and Pose Estimation...</li>
-                </ul>
-            </li>
-            <li class="text-justify">
-                <strong>Simplified "Load → Predict → Decode" Flow:</strong> The entire inference process—for both <strong>single images and batches</strong>—is streamlined into three intuitive steps. This pattern transforms raw model outputs into clean, human-readable Python data structures that are ready for immediate use.
-            </li>
-        </ul>
-    </div>
+                    <!-- Core Design & Workflow -->
+                    <div class="mb-4">
+                        <h4 class="text-lg font-semibold mb-2 text-slate-800">Core Design & Workflow:</h4>
+                        <ul class="list-disc list-inside text-slate-600 space-y-3">
+                            <li>
+                                <strong>Object-Oriented Architecture:</strong> The toolkit is built around a parent <strong>YoloModel</strong> class, which provides core functionalities. Specialized child classes inherit from it for each specific task:
+                                <ul class="list-disc ml-8 mt-2 space-y-1 text-slate-500">
+                                    <li><strong>YoloDetection</strong> for object detection</li>
+                                    <li><strong>YoloClassification</strong> for image classification</li>
+                                    <li>And others for Segmentation and Pose Estimation...</li>
+                                </ul>
+                            </li>
+                            <li class="text-justify">
+                                <strong>Simplified "Load → Predict → Decode" Flow:</strong> The entire inference process—for both <strong>single images and batches</strong>—is streamlined into three intuitive steps. This pattern transforms raw model outputs into clean, human-readable Python data structures that are ready for immediate use.
+                            </li>
+                        </ul>
+                    </div>
 
-    <!-- Code Snippets Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Example 1: Classification -->
-        <div>
-            <h4 class="text-base font-semibold mb-2 text-slate-800">Example: Simplified Classification</h4>
-            <div class="bg-slate-800 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto h-full">
-                <pre><code><span class="text-sky-400"># 1. Initialize the model</span>
+                    <!-- Code Snippets Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Example 1: Classification -->
+                        <div>
+                            <h4 class="text-base font-semibold mb-2 text-slate-800">Example: Simplified Classification</h4>
+                            <div class="bg-slate-800 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto h-full">
+<pre><code><span class="text-sky-400"># 1. Initialize the model</span>
 yolo_model = YoloClassification("yolov8n-cls.pt")
 
 <span class="text-sky-400"># 2. Predict the image</span>
@@ -233,14 +265,14 @@ class_name, score = yolo_model.decode_top1(raw_results)
 
 <span class="text-green-400">print</span>(f<span class="text-amber-400">"Class: {class_name}"</span>)
 <span class="text-gray-400"># > "goldfish"</span></code></pre>
-            </div>
-        </div>
+                            </div>
+                        </div>
 
-        <!-- Example 2: Detection -->
-        <div>
-            <h4 class="text-base font-semibold mb-2 text-slate-800">Example: Simplified Detection</h4>
-            <div class="bg-slate-800 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto h-full">
-                <pre><code><span class="text-sky-400"># 1. Initialize the model</span>
+                        <!-- Example 2: Detection -->
+                        <div>
+                            <h4 class="text-base font-semibold mb-2 text-slate-800">Example: Simplified Detection</h4>
+                            <div class="bg-slate-800 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto h-full">
+<pre><code><span class="text-sky-400"># 1. Initialize the model</span>
 yolo_model = YoloDetection("yolov8n.pt")
 
 <span class="text-sky-400"># 2. Predict the image</span>
@@ -251,29 +283,29 @@ decoded_results = yolo_model.decode_results(raw_results)
 
 <span class="text-sky-400"># 4. Process the simple list</span>
 <span class="text-purple-400">for</span> box, score, name <span class="text-purple-400">in</span> decoded_results:
-    <span class="text-green-400">print</span>(f<span class="text-amber-400">"Found: {name}"</span>)</code></pre>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Links and Tags -->
-    <div class="mt-4">
-        <div class="mb-4">
-            <a href="https://github.com/catptype/YOLO-Inference-Toolkit" class="text-base font-semibold text-blue-600 hover:text-blue-700 mr-4">View Project Details on Github</a>
-        </div>
-        
-        <!-- Unified Tags -->
-        <div class="flex flex-wrap gap-2">
-            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
-            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Object-Oriented Programming</span>
-            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">API Design</span>
-            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Developer Tool</span>
-            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">YOLO</span>
-            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Ultralytics</span>
-            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">PyTorch</span>
-        </div>
-    </div>
-</div>```
+<span class="text-green-400">print</span>(f<span class="text-amber-400">"Found: {name}"</span>)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Links and Tags -->
+                    <div class="mt-4">
+                        <div class="mb-4">
+                            <a href="https://github.com/catptype/YOLO-Inference-Toolkit" class="text-base font-semibold text-blue-600 hover:text-blue-700 mr-4">View Project Details on Github</a>
+                        </div>
+                        
+                        <!-- Unified Tags -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
+                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Object-Oriented Programming</span>
+                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">API Design</span>
+                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Developer Tool</span>
+                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">YOLO</span>
+                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Ultralytics</span>
+                            <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">PyTorch</span>
+                        </div>
+                    </div>
+                </div>```
 
                 <!-- Project 3 -->
                 <!-- <div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
@@ -314,5 +346,25 @@ decoded_results = yolo_model.decode_results(raw_results)
         </footer>
     </div>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden" onclick="closeLightbox()">
+        <img id="lightbox-image" src="" alt="Enlarged view" class="max-w-full max-h-full rounded-lg">
+    </div>
+    
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+
+        function openLightbox(src) {
+            lightboxImage.src = src;
+            lightbox.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+        }
+    </script>
+
 </body>
+
 </html>
