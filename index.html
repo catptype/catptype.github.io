@@ -208,7 +208,6 @@
                                 <div class="flex flex-wrap gap-2">
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Full-Stack Development</span>
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">RESTful API</span>
-                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">WebSockets</span>
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Multi-threading</span>
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Edge Computing</span>
                                 </div>
@@ -229,7 +228,113 @@
                     </div>
                 </div>
 
-                <!-- Project 2: YOLO Inference Toolkit -->
+                <!-- Project 2: Pill Identification System -->
+                <div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200 items-start">
+                    
+                    <!-- Text Description on the Left -->
+                    <div class="flex-grow md:w-3/5">
+                        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">Pill Identification System</h3>
+                        <!-- Revised Introduction -->
+                        <p class="mb-4 text-slate-700 text-justify">During my employment, I was the core developer for this real-time Pill Identification system, which was successfully <strong>demonstrated at two public technology events</strong>. I was responsible for the entire technical execution, from creating a custom dataset to building the full-stack architecture and the core AI engine capable of identifying diverse medicine forms—including tablets, capsules, boxes, blisters, and vials.</p>
+
+                        <!-- My Role & Responsibilities -->
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2 text-slate-800">My Role & Responsibilities:</h4>
+                            <ul class="list-disc list-inside text-slate-600 space-y-3">
+                                <li class="text-justify">
+                                    <strong>Custom Dataset Curation:</strong> With no public dataset available, I single-handedly photographed, processed, and labeled a comprehensive custom dataset, which formed the foundation of the AI's accuracy.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>AI Engine Development:</strong> Developed the core computer vision engine using <strong>YOLO (Ultralytics)</strong> to detect and classify all specified medicine forms, from simple pills to complex packaging.
+                                </li>
+                                <!-- This is a new, crucial bullet point -->
+                                <li class="text-justify">
+                                    <strong>Full-Stack System Architecture:</strong> Designed the end-to-end system and built a robust <strong>Django backend</strong>, including a functional frontend UI for crucial debugging and visual validation of the AI engine.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>API Integration for Mobile:</strong> Engineered and provided a real-time <strong>WebSocket API</strong> to the mobile development team, enabling seamless integration into the production application.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Features & Architecture -->
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2 text-slate-800">Key Features & Architecture:</h4>
+                            <ul class="list-disc list-inside text-slate-600 space-y-3">
+                                <!-- This is a new, foundational bullet point -->
+                                <li class="text-justify">
+                                    <strong>Multi-Form Identification:</strong> The core feature of the system is its ability to identify medicine in various forms including tablets, capsules, boxes, blisters, ampoules, and vials.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>Fine-Grained Recognition:</strong> The system can distinguish between medicines with nearly identical visual appearances—a task that is challenging for the human eye.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>Robustness to Challenges:</strong> Accurately identifies pills even in difficult scenarios, such as when a package contains a non-uniform mix of pills or includes broken tablets.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>Standardized Identification:</strong> Utilizes the official <strong>Thai Medicines Terminology (TMT)</strong> number as a unique identifier, linking every identification to a national standard.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Links -->
+                        <div class="mb-4">
+                            <a href="https://github.com/catptype/Pill-Identify-Showcase" class="text-base font-semibold text-blue-600 hover:text-blue-700">View Project Details on Github</a>
+                        </div>
+                        
+                        <!-- Unified Tags (Categorized) -->
+                        <div class="mt-4">
+                            
+                            <div class="mb-4">
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Tech Stack</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">OpenCV</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Django</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Tailwind CSS</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">WebSockets</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">SQLite</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Redis</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Key Concepts & Techniques</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Full-Stack Development</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Screenshots on the Right -->
+                    <div class="md:w-2/5 flex flex-col">
+    
+                        <!-- Hint text placed above the grid -->
+                        <p class="text-center text-sm text-slate-500 mb-3 italic">Click an image to view full size.</p>
+
+                        <!-- Grid container for the images -->
+                        <div class="grid grid-cols-2 gap-4">
+                            
+                            <!-- All your images now live inside the grid -->
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Tablet.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Tablet Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Capsule.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Capsule Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Blister.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Blister Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Vial.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Vial Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Box.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Box Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Broken.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Broken Tablet Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Size.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Size Tablet Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Color.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Color Tablet Identification">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Fenac.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Fine-Grained Recognition Example 1">
+                            <img onclick="openLightbox(this.src)" src="static/images/project2/Dexton.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Fine-Grained Recognition Example 2">
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Project 3: YOLO Inference Toolkit -->
                 <div class="flex flex-col gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
                     
                     <!-- Text Description -->
@@ -276,14 +381,14 @@
                             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                                 
                                 <!-- IMPORTANT: Replace these src paths with your new JPEG images -->
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Classification-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Classification Example">
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Classification-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Detection-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Detection-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Pose-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Pose-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Segmentation-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
-                                <img onclick="openLightbox(this.src)" src="static/images/project2/Segmentation-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Classification-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Classification Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Classification-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Detection-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Detection-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Pose-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Pose-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Segmentation-Single.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
+                                <img onclick="openLightbox(this.src)" src="static/images/project3/Segmentation-Batch.png" class="cursor-zoom-in object-cover w-full h-[200px] border rounded-lg shadow-xl" alt="Detection Example">
                             
                             </div>
                         </div>
@@ -326,7 +431,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Blue Archive Gacha Simulator -->
+                <!-- Project 4: Blue Archive Gacha Simulator -->
                 <div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200 items-start">
                     
                     <!-- Text Description on the Left -->
@@ -420,16 +525,18 @@
                     <div class="md:w-2/5 flex flex-col">
                         <div class="space-y-4">
                             <p class="text-center text-sm text-slate-500 italic">Click an image to view full size.</p>
-                            <img onclick="openLightbox(this.src)" src="static/images/project3/home.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Homepage">
-                            <img onclick="openLightbox(this.src)" src="static/images/project3/draw.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Pulling">
-                            <img onclick="openLightbox(this.src)" src="static/images/project3/result.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Pulling (Result)">
-                            <img onclick="openLightbox(this.src)" src="static/images/project3/dashboard.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Dashboard">
+                            <img onclick="openLightbox(this.src)" src="static/images/project4/home.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Homepage">
+                            <img onclick="openLightbox(this.src)" src="static/images/project4/draw.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Pulling">
+                            <img onclick="openLightbox(this.src)" src="static/images/project4/result.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Pulling (Result)">
+                            <img onclick="openLightbox(this.src)" src="static/images/project4/dashboard.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Dashboard">
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Project 4 -->
+
+
+                <!-- Project 5 -->
                 <!-- <div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
                     <div class="flex-grow md:w-3/5">
                         <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">Coming Soon</h3>
