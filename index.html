@@ -470,6 +470,9 @@
                                     <strong>Stateless Service Architecture:</strong> Decoupled core logic (Gacha Engine, Achievement Service) into stateless service classes, promoting separation of concerns and making the codebase cleaner and more testable.
                                 </li>
                                 <li class="text-justify">
+                                    <strong>Zero-Downtime Content Management:</strong> The application is architected for live content updates, fetching all core data dynamically from the database. This design allows new content to appear on the site instantly after a database update, requiring no server restarts or redeployment.
+                                </li>
+                                <li class="text-justify">
                                     <strong>Dual User Modes:</strong> Features a full user authentication system (powered by Django) to save all gacha history, achievements, and collections, while also supporting a <strong>guest mode</strong> for instant, no-registration access to the core simulator.
                                 </li>
                                 <li class="text-justify">
