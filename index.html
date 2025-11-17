@@ -65,59 +65,196 @@
                 </div>
             </section>
             
-            <!-- SECTION 2: SKILLS -->
-            <section id="skills" class="py-16 mb-12">
-                <h2 class="font-lexend text-4xl uppercase pb-2 mb-8 text-slate-900">Technical Skills</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- SECTION 2: SKILLS -->
+<section id="skills" class="py-16 mb-12">
+    <h2 class="font-lexend text-4xl uppercase pb-2 mb-8 text-slate-900">Technical Skills</h2>
+    
+    <div class="space-y-12">
 
-                    <!-- AI & Computer Vision Box -->
-                    <div class="bg-white p-6 rounded-lg border border-slate-200">
-                        <h4 class="text-xl font-bold mb-3 text-slate-900">AI & Computer Vision</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-2">
-                            <li><strong>Core Domains:</strong> Detection, Segmentation, Classification, OCR, Motion Analysis</li>
-                            <li><strong>Frameworks:</strong> PyTorch, Ultralytics, <span class="text-slate-400">†TensorFlow, †Keras</span></li>
-                            <li><strong>Libraries:</strong> OpenCV, Supervision, NumPy</li>
-                        </ul>
-                    </div>
-
-                    <!-- Backend & Full-Stack Development Box -->
-                    <div class="bg-white p-6 rounded-lg border border-slate-200">
-                        <h4 class="text-xl font-bold mb-3 text-slate-900">Backend & Full-Stack Development</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-2">
-                            <li><strong>Web Frameworks:</strong> Django, Django REST Framework</li>
-                            <li><strong>Frontend Tech:</strong> Bootstrap, Tailwind CSS</li>
-                            <li><strong>API Design:</strong> RESTful APIs, WebSockets</li>
-                            <li><strong>Databases & Caching:</strong> MySQL, SQLite, Redis</li>
-                        </ul>
-                    </div>
-
-                    <!-- Languages & Core Concepts Box -->
-                    <div class="bg-white p-6 rounded-lg border border-slate-200">
-                        <h4 class="text-xl font-bold mb-3 text-slate-900">Languages & Core Concepts</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-2">
-                            <li><strong>Primary Languages:</strong> Python, JavaScript, HTML, CSS</li>
-                            <li><strong>Key Concepts:</strong> Object-Oriented Programming, Multi&#8209;threading</li>
-                            <li><strong>Previous Experience:</strong> <span class="text-slate-400">†C#, †Java, †MATLAB</span></li>
-                        </ul>
-                    </div>
-
-                    <!-- Infrastructure & DevOps Box -->
-                    <div class="bg-white p-6 rounded-lg border border-slate-200">
-                        <h4 class="text-xl font-bold mb-3 text-slate-900">Infrastructure & DevOps</h4>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2">
-                            <li><strong>Deployment:</strong> Docker, Nginx</li>
-                            <li><strong>CI/CD:</strong> GitLab CI/CD</li>
-                            <li><strong>Version Control:</strong> Git & GitHub</li>
-                            <li><strong>Development Tools:</strong> VSCode, Postman</li>
-                        </ul>
-                    </div>
-                    
+        <!-- Category: AI & Computer Vision -->
+        <div>
+            <h4 class="text-xl font-bold mb-4 text-slate-900 border-b-2 border-slate-200 pb-2">AI & Computer Vision</h4>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 mt-4">
+                <a href="https://pytorch.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                    <img src="static/images/logo/PyTorch.svg" alt="PyTorch" class="w-10 h-10">
+                    <span class="mt-2 text-sm font-medium text-slate-700">PyTorch</span>
+                </a>
+                <a href="https://ultralytics.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                    <img src="static/images/logo/Ultralytics.svg" alt="Ultralytics" class="w-10 h-10">
+                    <span class="mt-2 text-sm font-medium text-slate-700">Ultralytics</span>
+                </a>
+                <a href="https://opencv.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                    <img src="static/images/logo/OpenCV.svg" alt="OpenCV" class="w-10 h-10">
+                    <span class="mt-2 text-sm font-medium text-slate-700">OpenCV</span>
+                </a>
+                <div class="flex flex-col items-center justify-center p-4 bg-slate-200 rounded-lg border border-slate-200 shadow-sm">
+                    <img src="static/images/logo/TensorFlow.svg" alt="TensorFlow" class="w-10 h-10 o-80">
+                    <span class="mt-2 text-sm font-medium text-slate-500">TensorFlow</span>
                 </div>
-                <!-- Legend for de-emphasized skills -->
-                <p class="text-center text-sm text-slate-500 mt-4 italic">
-                    Skills with † in gray denote prior experience.
-                </p>
-            </section>
+                <div class="flex flex-col items-center justify-center p-4 bg-slate-200 rounded-lg border border-slate-200 shadow-sm">
+                    <img src="static/images/logo/Keras.svg" alt="Keras" class="w-10 h-10 o-80">
+                    <span class="mt-2 text-sm font-medium text-slate-500">Keras</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: Web Development (Combined) -->
+        <div>
+            <h4 class="text-xl font-bold mb-4 text-slate-900 border-b-2 border-slate-200 pb-2">Web Development</h4>
+            <div class="space-y-6 mt-4">
+                <div>
+                    <h5 class="text-sm font-semibold text-slate-500 mb-3">Languages</h5>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                         <a href="https://www.python.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Python.svg" alt="Python" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Python</span>
+                        </a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/HTML.svg" alt="HTML" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">HTML</span>
+                        </a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/CSS.svg" alt="CSS" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">CSS</span>
+                        </a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/JavaScript.svg" alt="JavaScript" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">JavaScript</span>
+                        </a>
+                        <a href="https://www.typescriptlang.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/TypeScript.svg" alt="TypeScript" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">TypeScript</span>
+                        </a>
+                        <div class="flex flex-col items-center justify-center p-4 bg-slate-200 rounded-lg border border-slate-200 shadow-sm">
+                            <img src="static/images/logo/CSharp.svg" alt="C#" class="w-10 h-10 o-80">
+                            <span class="mt-2 text-sm font-medium text-slate-500">C#</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-4 bg-slate-200 rounded-lg border border-slate-200 shadow-sm">
+                            <img src="static/images/logo/Java.svg" alt="Java" class="w-10 h-10 o-80">
+                            <span class="mt-2 text-sm font-medium text-slate-500">Java</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-4 bg-slate-200 rounded-lg border border-slate-200 shadow-sm">
+                            <img src="static/images/logo/MATLAB.svg" alt="MATLAB" class="w-10 h-10 o-80">
+                            <span class="mt-2 text-sm font-medium text-slate-500">MATLAB</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-sm font-semibold text-slate-500 mb-3">Backend & Frontend</h5>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                        <a href="https://www.djangoproject.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Django.svg" alt="Django" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Django</span>
+                        </a>
+                        <a href="https://fastapi.tiangolo.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/FastAPI.svg" alt="FastAPI" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">FastAPI</span>
+                        </a>
+                        <a href="https://vuejs.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Vue.js.svg" alt="Vue.js" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Vue.js</span>
+                        </a>
+                        <a href="https://vitejs.dev/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Vite.js.svg" alt="Vite" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Vite</span>
+                        </a>
+                        <a href="https://tailwindcss.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/TailwindCSS.svg" alt="Tailwind CSS" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Tailwind CSS</span>
+                        </a>
+                        <a href="https://getbootstrap.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Bootstrap.svg" alt="Bootstrap" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Bootstrap</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-sm font-semibold text-slate-500 mb-3">Database & Caching</h5>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                        <a href="https://www.sqlalchemy.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/SQLAlchemy.svg" alt="SQLAlchemy" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">SQLAlchemy</span>
+                        </a>
+                        <a href="https://www.postgresql.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/PostgreSQL.svg" alt="PostgreSQL" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">PostgreSQL</span>
+                        </a>
+                        <a href="https://www.mysql.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/MySQL.svg" alt="MySQL" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">MySQL</span>
+                        </a>
+                        <a href="https://mariadb.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/MariaDB.svg" alt="MariaDB" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">MariaDB</span>
+                        </a>
+                        <a href="https://www.sqlite.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/SQLite.svg" alt="SQLite" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">SQLite</span>
+                        </a>
+                         <a href="https://redis.io/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Redis.svg" alt="Redis" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Redis</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: Infrastructure & DevOps -->
+        <div>
+            <h4 class="text-xl font-bold mb-4 text-slate-900 border-b-2 border-slate-200 pb-2">Infrastructure & Tools</h4>
+            <div class="space-y-6 mt-4">
+                <div>
+                    <h5 class="text-sm font-semibold text-slate-500 mb-3">Deployment & CI/CD</h5>
+                     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                        <a href="https://www.docker.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Docker.svg" alt="Docker" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Docker</span>
+                        </a>
+                        <a href="https://about.gitlab.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/GitLab.svg" alt="GitLab" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700 text-center">GitLab CI/CD</span>
+                        </a>
+                        <a href="https://www.nginx.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/NGINX.svg" alt="Nginx" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Nginx</span>
+                        </a>
+                    </div>
+                </div>
+                 <div>
+                    <h5 class="text-sm font-semibold text-slate-500 mb-3">Development Tools</h5>
+                     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                        <a href="https://git-scm.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Git.svg" alt="Git" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Git</span>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/GitHub.svg" alt="GitHub" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">GitHub</span>
+                        </a>
+                        <a href="https://www.raspberrypi.com/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Raspberry Pi.svg" alt="Raspberry Pi" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Raspberry Pi</span>
+                        </a>
+                        <a href="https://jupyter.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Jupyter.svg" alt="Jupyter" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Jupyter</span>
+                        </a>
+                        <a href="https://anaconda.org/" target="_blank" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg hover:scale-105 transition-all">
+                            <img src="static/images/logo/Anaconda.svg" alt="Anaconda" class="w-10 h-10">
+                            <span class="mt-2 text-sm font-medium text-slate-700">Anaconda</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Legend for de-emphasized skills -->
+    <p class="text-center text-sm text-slate-500 mt-8 italic">
+        Gray cards denote prior experience.
+    </p>
+</section>
             
             <!-- SECTION 3: SHOWCASE -->
             <section id="showcase" class="py-16 mb-12">
