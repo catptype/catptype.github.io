@@ -868,79 +868,81 @@
                 </div>
 
                 <!-- Project 6: YOLO Dataset Auditor & t-SNE Visualizer -->
-<div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200 items-start">
-    
-    <!-- Text Description on the Left -->
-    <div class="flex-grow md:w-3/5">
-        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Dataset Auditor & t-SNE Visualizer</h3>
-        <p class="mb-4 text-slate-700 text-justify">Manually finding labeling errors in a large image dataset is a slow and difficult process. I developed this <strong>open-source</strong> Python toolkit to automate the discovery of these errors. The tool extracts deep feature vectors from a YOLO model, visualizes dataset clusters using <strong>t-SNE</strong>, and uses a <strong>k-Nearest Neighbors (k-NN)</strong> algorithm to automatically pinpoint images that are likely mislabeled.</p>
+                <div class="flex flex-col md:flex-row gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200 items-start">
+                    
+                    <!-- Text Description on the Left -->
+                    <div class="flex-grow md:w-3/5">
+                        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Dataset Auditor & t-SNE Visualizer</h3>
+                        <p class="mb-4 text-slate-700 text-justify">Manually finding labeling errors in a large image dataset is a slow and difficult process. I developed this <strong>open-source</strong> Python toolkit to automate the discovery of these errors. The tool extracts deep feature vectors from a YOLO model, visualizes dataset clusters using <strong>t-SNE</strong>, and uses a <strong>k-Nearest Neighbors (k-NN)</strong> algorithm to automatically pinpoint images that are likely mislabeled.</p>
 
-        <!-- Core Features & Implementation -->
-        <div class="mb-4">
-            <h4 class="text-lg font-semibold mb-2 text-slate-800">Core Features & Implementation:</h4>
-            <ul class="list-disc list-inside text-slate-600 space-y-3">
-                <li class="text-justify">
-                    <strong>Automated Feature Extraction:</strong> The tool is compatible with modern YOLO architectures (v8, v11, v12) and intelligently inspects the model to automatically find the optimal layer for feature extraction.
-                </li>
-                <li class="text-justify">
-                    <strong>"Ghost Mode" Visualization:</strong> I designed a specialized plotting mode that renders correctly labeled data as transparent "ghosts," causing the mislabeled data points—which appear as bold, conflicting colors—to stand out immediately for easy identification.
-                </li>
-                <li class="text-justify">
-                    <strong>Actionable Error Reports:</strong> The analysis doesn't just produce a visual plot; it generates a `_fix_list.csv` file that lists every suspicious image, its current class, the algorithm's suggested class, and a conflict score, providing a clear and actionable to-do list for dataset cleaning.
-                </li>
-                <li class="text-justify">
-                    <strong>Robust Caching for Large Datasets:</strong> Built with a powerful caching system that saves progress during the feature extraction phase. This makes the tool safe to interrupt and resume at any time, enabling it to handle massive datasets of over 100,000 images without losing work.
-                </li>
-            </ul>
-        </div>
+                        <!-- Core Features & Implementation (Revised for a General Audience) -->
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2 text-slate-800">Core Features & Implementation:</h4>
+                            <ul class="list-disc list-inside text-slate-600 space-y-3">
+                                <li class="text-justify">
+                                    <strong>Visual Dataset Health Check:</strong> The tool generates an interactive 2D map of the entire dataset, grouping similar images into colored clusters. This allows a developer to instantly see the overall structure and health of their data at a single glance.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>Error Highlighting:</strong> To make finding errors effortless, I designed a "Ghost Mode" that makes all the "good" data points faint and transparent. This causes the few "bad" data points to stand out as bright, obvious errors.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>Automatic "To-Do List" for Fixing Errors:</strong> After the analysis, the tool automatically generates a simple CSV file that acts as a to-do list. It lists every suspicious image, what its wrong label is, and what the correct label should be, making the cleaning process fast and efficient.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>Built for Massive Datasets:</strong> The tool was designed to be robust. It automatically saves its progress, so if it's interrupted while processing a huge dataset (100,000+ images), it will resume exactly where it left off without losing any work.
+                                </li>
+                            </ul>
+                        </div>
 
-        <!-- Links -->
-        <div class="mb-4">
-            <a href="https://github.com/catptype/YOLO-tSNE-Visualizer" class="text-base font-semibold text-blue-600 hover:text-blue-700">View Project & Code on Github</a>
-        </div>
-        
-        <!-- Unified Tags (Categorized) -->
-        <div class="mt-4">
-            
-            <div class="mb-4">
-                <h5 class="text-sm font-semibold mb-2 text-slate-600">Tech Stack</h5>
-                <div class="flex flex-wrap gap-2">
-                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
-                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Ultralytics</span>
-                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Scikit-learn</span>
-                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Pandas</span>
-                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Plotly</span>
+                        <!-- Links -->
+                        <div class="mb-4">
+                            <a href="https://github.com/catptype/YOLO-tSNE-Visualizer" class="text-base font-semibold text-blue-600 hover:text-blue-700">View Project & Code on Github</a>
+                        </div>
+                        
+                        <!-- Unified Tags (Categorized) -->
+                        <div class="mt-4">
+                            
+                            <div class="mb-4">
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Tech Stack</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Python</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Ultralytics</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Scikit-learn</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Pandas</span>
+                                    <span class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">Plotly</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h5 class="text-sm font-semibold mb-2 text-slate-600">Key Concepts & Techniques</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Developer Tool</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Data Visualization</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Automation</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Error Detection</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">t-SNE</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">k-NN</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Open Source</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Screenshots on the Right -->
+                    <div class="md:w-2/5 flex flex-col">
+                        <div class="space-y-4">
+                            <p class="text-center text-sm text-slate-500 italic">Click an image to view full size.</p>
+
+                            <!-- Screenshots -->
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot1.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="t-SNE Cluster Visualization">
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot2.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot3.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot4.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-
-            <div class="mb-4">
-                <h5 class="text-sm font-semibold mb-2 text-slate-600">Key Concepts & Techniques</h5>
-                <div class="flex flex-wrap gap-2">
-                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Developer Tool</span>
-                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Data Visualization</span>
-                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Automation</span>
-                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Error Detection</span>
-                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">t-SNE</span>
-                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">k-NN</span>
-                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Open Source</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Screenshots on the Right -->
-    <div class="md:w-2/5 flex flex-col">
-        <div class="space-y-4">
-            <p class="text-center text-sm text-slate-500 italic">Click an image to view full size.</p>
-
-            <!-- Screenshots -->
-            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot1.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="t-SNE Cluster Visualization">
-            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot2.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
-        </div>
-    </div>
-
-</div>
 
                 <!-- Project 7: Foundational Deep Learning Implementations -->
                 <div class="flex flex-col gap-8 mb-12 bg-white p-6 rounded-lg border border-slate-200">
