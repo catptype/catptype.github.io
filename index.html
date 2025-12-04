@@ -873,7 +873,7 @@
                     <!-- Text Description on the Left -->
                     <div class="flex-grow md:w-3/5">
                         <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Dataset Auditor & t-SNE Visualizer</h3>
-                        <p class="mb-4 text-slate-700 text-justify">Manually finding labeling errors in a large image dataset is a slow and difficult process. I developed this <strong>open-source</strong> Python toolkit to automate the discovery of these errors. The tool extracts deep feature vectors from a YOLO model, visualizes dataset clusters using <strong>t-SNE</strong>, and uses a <strong>k-Nearest Neighbors (k-NN)</strong> algorithm to automatically pinpoint images that are likely mislabeled.</p>
+                        <p class="mb-4 text-slate-700 text-justify">Manually finding labeling errors in a large image dataset is a slow and difficult process. I developed this <strong>open-source</strong> Python toolkit to solve two critical problems in the AI workflow: finding labeling errors in large datasets and understanding why a model makes its decisions. The tool uses a YOLO model to "see" images, applies machine learning to pinpoint mislabeled data, and generates heatmaps to reveal the model's internal logic.</p>
 
                         <!-- Core Features & Implementation (Revised for a General Audience) -->
                         <div class="mb-4">
@@ -890,6 +890,9 @@
                                 </li>
                                 <li class="text-justify">
                                     <strong>Built for Massive Datasets:</strong> The tool was designed to be robust. It automatically saves its progress, so if it's interrupted while processing a huge dataset (100,000+ images), it will resume exactly where it left off without losing any work.
+                                </li>
+                                <li class="text-justify">
+                                    <strong>"X-Ray Vision" with Heatmaps:</strong> I developed a feature to generate high-resolution heatmaps that show exactly which pixels the AI is focusing on. This "X-Ray vision" helps developers understand and debug their model's logic. My custom implementation perfectly handles rectangular images without the distortion common in other tools.
                                 </li>
                             </ul>
                         </div>
@@ -939,6 +942,7 @@
                             <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot2.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
                             <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot3.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
                             <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot4.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot5.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
                         </div>
                     </div>
 
