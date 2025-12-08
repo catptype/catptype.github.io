@@ -872,27 +872,28 @@
                     
                     <!-- Text Description on the Left -->
                     <div class="flex-grow md:w-3/5">
-                        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Dataset Auditor & t-SNE Visualizer</h3>
-                        <p class="mb-4 text-slate-700 text-justify">Manually finding labeling errors in a large image dataset is a slow and difficult process. I developed this <strong>open-source</strong> Python toolkit to solve two critical problems in the AI workflow: finding labeling errors in large datasets and understanding why a model makes its decisions. The tool uses a YOLO model to "see" images, applies machine learning to pinpoint mislabeled data, and generates heatmaps to reveal the model's internal logic.</p>
-
-                        <!-- Core Features & Implementation (Revised for a General Audience) -->
+                        <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900">YOLO Dataset Auditor & Visualizer</h3>
+                        <p class="mb-4 text-slate-700 text-justify">I developed this open-source Python toolkit to solve two critical problems in the AI workflow: finding labeling errors in large datasets and understanding why a model makes its decisions. The tool uses a YOLO model to analyze images, applies machine learning to pinpoint mislabeled data, and generates high-fidelity heatmaps to reveal the model's internal logic.</p>
+                        
+                        <!-- Core Features & Implementation (Updated for 3D) -->
                         <div class="mb-4">
                             <h4 class="text-lg font-semibold mb-2 text-slate-800">Core Features & Implementation:</h4>
                             <ul class="list-disc list-inside text-slate-600 space-y-3">
                                 <li class="text-justify">
-                                    <strong>Visual Dataset Health Check:</strong> The tool generates an interactive 2D map of the entire dataset, grouping similar images into colored clusters. This allows a developer to instantly see the overall structure and health of their data at a single glance.
+                                    <strong>2D & 3D Dataset Health Check:</strong> The tool generates interactive maps of the entire dataset in both 2D and 3D, grouping similar images into colored clusters. This allows developers to rotate and explore the data from different angles to find hidden patterns and instantly see its overall health.
                                 </li>
                                 <li class="text-justify">
-                                    <strong>Error Highlighting:</strong> To make finding errors effortless, I designed a "Ghost Mode" that makes all the "good" data points faint and transparent. This causes the few "bad" data points to stand out as bright, obvious errors.
+                                    <strong>Error Highlighting:</strong> To make finding errors effortless, I designed a Ghost Mode that makes all correctly labeled data points faint and transparent. This causes the few mislabeled data points to stand out as bright, obvious errors in both the 2D and 3D views.
                                 </li>
                                 <li class="text-justify">
-                                    <strong>Automatic "To-Do List" for Fixing Errors:</strong> After the analysis, the tool automatically generates a simple CSV file that acts as a to-do list. It lists every suspicious image, what its wrong label is, and what the correct label should be, making the cleaning process fast and efficient.
+                                    <strong>Model Interpretability with Heatmaps:</strong> To help developers understand why a model makes its decisions, I developed a feature to generate high-resolution heatmaps. These visualizations show exactly which pixels the AI is focusing on, providing a clear tool for debugging and building trust in the model.
                                 </li>
                                 <li class="text-justify">
-                                    <strong>Built for Massive Datasets:</strong> The tool was designed to be robust. It automatically saves its progress, so if it's interrupted while processing a huge dataset (100,000+ images), it will resume exactly where it left off without losing any work.
+                                    <strong>Automatic To-Do List for Fixing Errors:</strong> After the analysis, the tool automatically generates a simple CSV file that acts as a to-do list. It lists every suspicious image, its current label, and what the correct label should be, making the cleaning process fast and efficient.
                                 </li>
+                                <!-- This feature has been restored -->
                                 <li class="text-justify">
-                                    <strong>Model Interpretability with Heatmaps:</strong> To help developers understand <strong>why</strong> a model makes its decisions, I developed a feature to generate high-resolution heatmaps. These visualizations show exactly which pixels the AI is focusing on, providing a clear and accurate tool for debugging and building trust in the model.
+                                    <strong>Built for Massive Datasets:</strong> The tool was designed to be robust. It automatically saves its progress, so if it is interrupted while processing a huge dataset of over 100,000 images, it can be restarted and will resume exactly where it left off without losing any work.
                                 </li>
                             </ul>
                         </div>
@@ -902,7 +903,7 @@
                             <a href="https://github.com/catptype/YOLO-tSNE-Visualizer" class="text-base font-semibold text-blue-600 hover:text-blue-700">View Project & Code on Github</a>
                         </div>
                         
-                        <!-- Unified Tags (Categorized) -->
+                        <!-- Unified Tags (Categorized) (Updated for 3D) -->
                         <div class="mt-4">
                             
                             <div class="mb-4">
@@ -920,12 +921,12 @@
                                 <h5 class="text-sm font-semibold mb-2 text-slate-600">Key Concepts & Techniques</h5>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Developer Tool</span>
-                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Data Visualization</span>
-                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Automation</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Model Interpretability</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Data Visualization (2D & 3D)</span>
+                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Heatmap Generation</span>
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Error Detection</span>
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">t-SNE</span>
                                     <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">k-NN</span>
-                                    <span class="py-1 px-3 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Open Source</span>
                                 </div>
                             </div>
 
@@ -938,11 +939,20 @@
                             <p class="text-center text-sm text-slate-500 italic">Click an image to view full size.</p>
 
                             <!-- Screenshots -->
-                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot1.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="t-SNE Cluster Visualization">
-                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot2.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
-                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot3.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
-                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot4.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
-                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot5.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="Ghost Mode Error Detection">
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot1.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="2D t-SNE Cluster Visualization">
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot2.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="3D t-SNE Cluster Visualization">
+                                <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot3.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="3D t-SNE Cluster Visualization">
+                            </div>
+
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot4.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="3D t-SNE Cluster Visualization">
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot5.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="3D t-SNE Cluster Visualization">
+                                <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot6.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="3D t-SNE Cluster Visualization">
+                            </div>
+                            <img onclick="openLightbox(this.src)" src="static/images/project6/screenshot7.png" class="cursor-zoom-in object-cover w-full h-full border rounded-lg shadow-xl" alt="3D t-SNE Cluster Visualization">
                         </div>
                     </div>
 
