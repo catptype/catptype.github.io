@@ -17,7 +17,7 @@ defineProps<{
       class="mb-6 border-l-4 border-slate-200 pl-4 py-2"
     >
       <!-- Title & Description -->
-      <h5 class="font-semibold text-slate-800 mb-2">{{ version.title }}</h5>
+      <h5 class="font-semibold text-slate-800 mb-2" v-html="version.title"></h5>
       <p class="text-sm text-slate-600 mb-2" v-html="version.description"></p>
       
       <!-- Links -->
@@ -33,9 +33,8 @@ defineProps<{
           :key="stack.label"
           class="bg-slate-50 p-3 rounded-lg border border-slate-200"
         >
-          <!-- Custom Label (e.g. "Backend: FastAPI") -->
-          <h6 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-            {{ stack.label }}
+          <!-- Custom Label For Tech Stack-->
+          <h6 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2" v-html="stack.label">
           </h6>
           
           <!-- Tags -->
@@ -43,8 +42,7 @@ defineProps<{
             <span 
               v-for="tag in stack.tags" 
               :key="tag" 
-              class="py-1 px-3 text-sm font-medium rounded-full bg-blue-100 text-blue-800">
-              {{ tag }}
+              class="py-1 px-3 text-sm font-medium rounded-full bg-blue-100 text-blue-800" v-html="tag">
             </span>
           </div>
         </div>
