@@ -4,6 +4,8 @@
   import { useLightboxStore } from '@/stores/lightbox';
   import ProjectTags from './ProjectTags.vue';
   import ProjectBulletContent from './ProjectBulletContent.vue';
+  import ProjectInfoBlock from './ProjectInfoBlock.vue'; 
+  import ProjectVersions from './ProjectVersions.vue'; 
 
   const props = defineProps<{ project: Project }>();
   const lightbox = useLightboxStore();
@@ -97,16 +99,26 @@
       <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900" v-html="project.title"></h3>
       <p class="mb-4 text-slate-700 text-justify" v-html="project.description"></p>
 
-      <!-- 2. Responsibilities (Bullet Pattern) -->
+      <!-- Responsibilities (Bullet Pattern) -->
       <ProjectBulletContent 
         title="My Role & Responsibilities:" 
         :items="project.responsibilities" 
       />
 
-      <!-- 3. Key Features (Bullet Pattern) -->
+      <!-- Key Features (Bullet Pattern) -->
       <ProjectBulletContent 
         title="Key Features & Architecture:" 
         :items="project.features" 
+      />
+
+      <ProjectVersions 
+        v-if="project.versions" 
+        :versions="project.versions" 
+      />
+
+      <ProjectInfoBlock 
+        v-if="project.infoBlock" 
+        :data="project.infoBlock" 
       />
 
       <!-- Links -->

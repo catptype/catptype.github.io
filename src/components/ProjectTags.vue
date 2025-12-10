@@ -15,8 +15,8 @@ defineProps<{
         :key="tag" 
         class="py-1 px-3 text-sm font-medium rounded-full"
         :class="color"
-        v-html="tag"
-      ></span>
+        v-html="tag">
+      </span>
     </div>
   </div>
 </template>

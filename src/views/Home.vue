@@ -5,7 +5,7 @@
   import ShowcaseSection from '@/components/ShowcaseSection.vue';
   import ContactSection from '@/components/ContactSection.vue';
   import FooterSection from '@/components/FooterSection.vue';
-  // import GlobalLightbox from '@/components/GlobalLightbox.vue';
+  import GlobalLightbox from '@/components/GlobalLightbox.vue';
 
   // Import data (assuming you created src/data/content.ts or similar)
   // You can also inline the data here for testing
@@ -14,32 +14,20 @@
 </script>
 
 <style>
-/* Global styles for smooth scrolling are often best in style.css, but can go here */
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 </style>
 
 <template>
   <div class="max-w-6xl mx-auto px-4 font-inter bg-slate-50 text-slate-800">
     <NavBar />
-    
-    <!-- <main>
-      <Introduction />
-      <SkillsSection :categories="skillCategories" />
-      <ShowcaseSection :projects="projects" />
-      <ContactSection />
-    </main> -->
-
     <Introduction />
     <SkillsSection :categories="skillCategories" :concepts="coreConcepts" />
     <ShowcaseSection :projects="projects" />
-
-
     <ContactSection />
-
     <FooterSection />
-    <!-- <GlobalLightbox /> -->
+    <GlobalLightbox />
   </div>
 </template>
 
