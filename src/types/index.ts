@@ -35,5 +35,6 @@ export interface Project {
   liveUrl?: string;
 
   // Screenshot
+  isGrid?: boolean; // use to switch screenshot layout to 2-column
   images: string[];
 }

@@ -2,6 +2,8 @@
   import { computed } from 'vue';
   import type { Project } from '@/types';
   import { useLightboxStore } from '@/stores/lightbox';
+  import ProjectTags from './ProjectTags.vue';
+  import ProjectBulletContent from './ProjectBulletContent.vue';
 
   const props = defineProps<{ project: Project }>();
   const lightbox = useLightboxStore();
@@ -11,7 +13,7 @@
     switch (props.project.layout) {
       case 'left': return 'flex-col md:flex-row';
       case 'right': return 'flex-col md:flex-row-reverse'; // Swaps order visually
-      case 'bottom': return 'flex-col';
+      case 'bottom': return 'flex-col flex-col-reverse';
       case 'none': return 'flex-col';
       default: return 'flex-col';
     }
@@ -26,6 +28,21 @@
   const textContainerWidth = computed(() => {
     if (props.project.layout === 'bottom' || props.project.layout === 'none') return 'w-full';
     return 'flex-grow md:w-3/5'; // Left or Right
+  });
+
+  const imageGridClasses = computed(() => {
+    // Case 1: Bottom Layout (Always a wide grid)
+    if (props.project.layout === 'bottom') {
+      return 'grid grid-cols-2 md:grid-cols-4 gap-4';
+    }
+    
+    // Case 2: Left/Right Layout WITH Grid enabled (2 columns)
+    if (props.project.isGrid) {
+      return 'grid grid-cols-2 gap-4';
+    }
+
+    // Case 3: Default Left/Right Layout (Vertical Stack)
+    return 'flex flex-col space-y-4';
   });
 
   const tagSections = computed(() => [
@@ -59,15 +76,18 @@
       <p class="text-center text-sm text-slate-500 italic mt-3">Click an image to view full size.</p>
       
       <!-- Layout Logic for Grid vs Single Column of images -->
-      <div :class="project.layout === 'bottom' ? 'grid grid-cols-2 md:grid-cols-4 gap-4' : 'flex flex-col space-y-4'">
+      <div :class="imageGridClasses">
          <img 
             v-for="(img, idx) in project.images"
             alt="" 
             :key="idx" 
             :src="img" 
             @click="lightbox.open(img)"
-            class="cursor-zoom-in object-cover w-full border border-slate-300 rounded-lg shadow-xl hover:opacity-90 transition"
-            :class="{'h-[200px]': project.layout === 'bottom'}" 
+            class="cursor-zoom-in object-cover w-full border border-slate-300 rounded-lg shadow-xl hover:opacity-50 transition"
+            :class="{
+              'h-[200px]': project.layout === 'bottom',
+              'h-[120px]': project.isGrid && project.layout !== 'bottom' // Optional: fix height for uniform grid look
+            }" 
          />
       </div>
     </div>
@@ -77,21 +97,17 @@
       <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900" v-html="project.title"></h3>
       <p class="mb-4 text-slate-700 text-justify" v-html="project.description"></p>
 
-      <!-- Responsibilities -->
-      <div v-if="project.responsibilities" class="mb-4">
-        <h4 class="text-lg font-semibold mb-2 text-slate-800">My Role & Responsibilities:</h4>
-        <ul class="list-disc list-inside text-slate-600 space-y-2">
-          <li v-for="(res, i) in project.responsibilities" :key="i" v-html="res"></li>
-        </ul>
-      </div>
+      <!-- 2. Responsibilities (Bullet Pattern) -->
+      <ProjectBulletContent 
+        title="My Role & Responsibilities:" 
+        :items="project.responsibilities" 
+      />
 
-      <!-- Key Features -->
-      <div v-if="project.features" class="mb-4">
-        <h4 class="text-lg font-semibold mb-2 text-slate-800">Key Features & Architecture:</h4>
-        <ul class="list-disc list-inside text-slate-600 space-y-2">
-          <li v-for="(fea, i) in project.features" :key="i" v-html="fea"></li>
-        </ul>
-      </div>
+      <!-- 3. Key Features (Bullet Pattern) -->
+      <ProjectBulletContent 
+        title="Key Features & Architecture:" 
+        :items="project.features" 
+      />
 
       <!-- Links -->
       <div class="mb-4 flex gap-4">
@@ -100,21 +116,13 @@
       </div>
 
       <!-- Unified Tags Loop -->
-      <!-- We loop through the 'tagSections' array defined in the script -->
-      <template v-for="section in tagSections" :key="section.id">
-        <div v-if="section.data && section.data.length > 0" class="mt-4">
-          <h5 class="text-sm font-semibold mb-2 text-slate-600">{{ section.title }}</h5>
-          <div class="flex flex-wrap gap-2">
-            <span 
-              v-for="tag in section.data" 
-              :key="tag" 
-              class="py-1 px-3 text-sm font-medium rounded-full"
-              :class="section.color"
-              v-html="tag">
-            </span>
-          </div>
-        </div>
-      </template>
+      <ProjectTags
+        v-for="section in tagSections"
+        :key="section.id"
+        :title="section.title"
+        :tags="section.data"
+        :color="section.color"
+      />
       
     </div>
 

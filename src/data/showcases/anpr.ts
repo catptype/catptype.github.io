@@ -13,7 +13,7 @@ export const anpr: Project = {
   features: [
     "<strong>Integrated Data Labeling Workflow:</strong> To enable continuous model improvement, I built a Dataset Mode and a web UI to review, correct, and validate predictions, creating a powerful feedback loop for retraining.",
     "<strong>High&#8209Performance Multi&#8209Threading:</strong> The backend pipeline is fully concurrent to ensure real&#8209time performance without bottlenecks.",
-    "<strong>Commercial Integration:</strong> The final application was architected for a dual role: providing a staff&#8209only UI for configuration and serving detection data to the central Venus Sentinel platform via a REST API to control automated gate barriers."
+    `<strong>Commercial Integration:</strong> The final application was architected for a dual role: providing a staff&#8209only UI for configuration and serving detection data to the central <a href="https://bgs.co.th/venus-sentinel-ระบบไม้กั้นอัตโนมัติ/" class="font-semibold text-blue-600 hover:text-blue-700">Venus Sentinel</a> platform via a REST API to control automated gate barriers.`
   ],
   tags: {
     techStack: [
@@ -33,6 +33,7 @@ export const anpr: Project = {
   },
   
   githubUrl: "https://github.com/catptype/ANPR-Showcase",
+  
   images: [
     "/static/images/anpr_project/screenshot1.png",
     "/static/images/anpr_project/screenshot2.png",
