@@ -37,4 +37,8 @@ export const portfolio: Project = {
   },
   
   githubUrl: "https://github.com/catptype/catptype.github.io",
+
+  images: [
+    "/static/images/portfolio_project/screenshot1.png",
+  ]
 }
