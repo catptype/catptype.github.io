@@ -10,7 +10,7 @@
   // Import data (assuming you created src/data/content.ts or similar)
   // You can also inline the data here for testing
   import { skillCategories, coreConcepts } from '@/data/skills';
-  import { projects } from '@/data/showcases';
+  import { projects } from '@/data/showcases/index';
 </script>
 
 <style>

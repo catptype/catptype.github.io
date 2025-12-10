@@ -12,16 +12,28 @@ export interface SkillCategory {
 
 export type Layout = 'left' | 'right' | 'bottom' | 'none'; 
 
+export interface ProjectTags {
+  techStack: string[];      // e.g. Python, Vue
+  concepts?: string[];      // e.g. REST API, Multi-threading
+  infrastructure?: string[]; // e.g. Docker, Nginx
+}
+
 export interface Project {
   title: string;
-  layout: Layout; 
   description: string;
+  layout: Layout;
+
+  // Content
   responsibilities?: string[];
   features?: string[];
-  techStack: string[];
-  deploy?: string[];
-  keyConcepts: string[];
+  
+  // Organized Tags
+  tags: ProjectTags;
+  
+  // External links
   githubUrl?: string;
   liveUrl?: string;
+
+  // Screenshot
   images: string[];
 }

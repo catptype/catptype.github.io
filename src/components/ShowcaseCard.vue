@@ -27,6 +27,27 @@
     if (props.project.layout === 'bottom' || props.project.layout === 'none') return 'w-full';
     return 'flex-grow md:w-3/5'; // Left or Right
   });
+
+  const tagSections = computed(() => [
+    { 
+      id: 'stack',
+      title: 'Tech Stack', 
+      data: props.project.tags.techStack, 
+      color: 'bg-blue-100 text-blue-800' 
+    },
+    { 
+      id: 'concepts',
+      title: 'Key Concepts & Techniques', 
+      data: props.project.tags.concepts, 
+      color: 'bg-teal-100 text-teal-800' 
+    },
+    { 
+      id: 'infra',
+      title: 'Deployment & Infrastructure', 
+      data: props.project.tags.infrastructure, 
+      color: 'bg-slate-200 text-slate-800' 
+    }
+  ]);
 </script>
 
 <template>
@@ -78,44 +99,22 @@
         <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" class="text-base font-semibold text-blue-600 hover:text-blue-700">View Live Demo</a>
       </div>
 
-      <!-- Tech Stack -->
-      <div v-if="project.techStack" class="mt-4">
-        <h5 class="text-sm font-semibold mb-2 text-slate-600">Tech Stack</h5>
-        <div class="flex flex-wrap gap-2">
-          <span 
-            v-for="tech in project.techStack" 
-            :key="tech" 
-            class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full"
-            v-html="tech">
-          </span>
+      <!-- Unified Tags Loop -->
+      <!-- We loop through the 'tagSections' array defined in the script -->
+      <template v-for="section in tagSections" :key="section.id">
+        <div v-if="section.data && section.data.length > 0" class="mt-4">
+          <h5 class="text-sm font-semibold mb-2 text-slate-600">{{ section.title }}</h5>
+          <div class="flex flex-wrap gap-2">
+            <span 
+              v-for="tag in section.data" 
+              :key="tag" 
+              class="py-1 px-3 text-sm font-medium rounded-full"
+              :class="section.color"
+              v-html="tag">
+            </span>
+          </div>
         </div>
-      </div>
-
-      <!-- Key Concepts & Techniques -->
-      <div v-if="project.keyConcepts" class="mt-4">
-        <h5 class="text-sm font-semibold mb-2 text-slate-600">Key Concepts & Techniques</h5>
-        <div class="flex flex-wrap gap-2">
-          <span 
-            v-for="concept in project.keyConcepts" 
-            :key="concept" 
-            class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full"
-            v-html="concept">
-          </span>
-        </div>
-      </div>
-
-      <!-- Deployment & Infrastructure -->
-      <div v-if="project.deploy" class="mt-4">
-        <h5 class="text-sm font-semibold mb-2 text-slate-600">Deployment & Infrastructure</h5>
-        <div class="flex flex-wrap gap-2">
-          <span 
-            v-for="deploy in project.deploy" 
-            :key="deploy" 
-            class="py-1 px-3 bg-blue-100 text-blue-800 text-sm font-medium rounded-full"
-            v-html="deploy">
-          </span>
-        </div>
-      </div>
+      </template>
       
     </div>
 
