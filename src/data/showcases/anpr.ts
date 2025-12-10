@@ -2,6 +2,7 @@ import type { Project } from '@/types';
 
 export const anpr: Project = {
   title: "Real&#8209;time Vehicle Detection & License Plate Recognition System",
+  categories: ["AI", "Full-Stack"], 
   layout: "left",
   description: "During my role at company, I was the sole developer tasked with designing, building, and deploying the Automatic Number Plate Recognition (ANPR) system from the ground up. I was responsible for the entire project lifecycle, from initial data collection to its final integration as the core technology for a commercial security product. The system performs real‑time vehicle analysis and Thai license plate recognition from live CCTV feeds.",
   responsibilities: [

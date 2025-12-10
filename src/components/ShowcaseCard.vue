@@ -96,6 +96,17 @@
 
     <!-- TEXT SECTION -->
     <div :class="textContainerWidth">
+      
+      <!-- NEW: Category Badges -->
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span 
+          v-for="cat in project.categories" 
+          :key="cat"
+          class="inline-block px-2 py-1 text-xs font-bold tracking-wider uppercase text-blue-700 bg-blue-50 rounded border border-blue-100"
+          v-html="cat">
+        </span>
+      </div>
+      
       <h3 class="text-2xl font-bold font-lexend mb-2 text-slate-900" v-html="project.title"></h3>
       <p class="mb-4 text-slate-700 text-justify" v-html="project.description"></p>
 

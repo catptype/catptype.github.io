@@ -10,6 +10,7 @@ export interface SkillCategory {
   skills: SkillCard[];
 }
 
+export type ProjectCategory = 'AI' | 'Full-Stack' | 'Backend' | 'Frontend' | 'Tools' | 'Open-Source' ;
 export type Layout = 'left' | 'right' | 'bottom' | 'none'; 
 
 export interface ProjectTags {
@@ -46,6 +47,7 @@ export interface ProjectVersion {
 
 export interface Project {
   title: string;
+  categories: ProjectCategory[]; 
   description: string;
   layout: Layout;
 

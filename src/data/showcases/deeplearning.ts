@@ -2,6 +2,7 @@ import type { Project } from '@/types';
 
 export const deeplearning: Project = {
   title: "Foundational Deep Learning: From Papers to Code",
+  categories: ["AI"],
   layout: "none",
   description: "This project is the detailed record of my self&#8209;study journey into the foundations of modern computer vision. To bridge the gap from theory to practice, I dedicated myself to implementing seminal deep learning research papers from scratch using TensorFlow and Keras. This repository showcases my ability to dissect, understand, and build complex AI architectures based on academic literature.",
 

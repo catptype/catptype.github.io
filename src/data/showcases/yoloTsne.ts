@@ -2,6 +2,7 @@ import type { Project } from '@/types';
 
 export const tsne: Project = {
   title: "YOLO Dataset Auditor & Visualizer",
+  categories: ["AI", "Open-Source", "Tools"],
   layout: "left",
   description: "I developed this open&#8209;source Python toolkit to solve two critical problems in the AI workflow: finding labeling errors in large datasets and understanding why a model makes its decisions. The tool uses a YOLO model to analyze images, applies machine learning to pinpoint mislabeled data, and generates high&#8209;fidelity heatmaps to reveal the model's internal logic.",
 

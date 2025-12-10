@@ -2,6 +2,7 @@ import type { Project } from '@/types';
 
 export const czn: Project = {
   title: "Chaos Zero Nightmare Deck Calculator",
+  categories: ["Frontend"], 
   layout: "left",
   description: "I built this modern web application to demonstrate my skills in component&#8209;based frontend architecture. The tool provides real&#8209;time cost tracking for deck modifications in the game Chaos Zero Nightmare and is built entirely with a modern Vue.js stack, ensuring a fast, responsive, and type&#8209;safe user experience.",
   features: [

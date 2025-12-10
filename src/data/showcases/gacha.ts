@@ -2,6 +2,7 @@ import type { Project } from '@/types';
 
 export const gacha: Project = {
   title: "Case Study: Blue Archive Gacha Simulator",
+  categories: ["Full-Stack", "Backend", "Frontend"],
   layout: "right",
   description: "I built this web application not just once, but multiple times as a personal case study in full&#8209;stack web development. This is a non&#8209;profit, fan&#8209;made project created for fun and educational purposes. The goal was to implement the exact same feature&#8209;rich application using different technology stacks to directly compare their complexities, advantages, and architectural patterns. This exploration covers two primary architectures: a traditional monolithic app and a modern decoupled API&#8209;driven app.",
 
