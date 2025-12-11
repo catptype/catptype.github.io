@@ -2,7 +2,7 @@ import type { Project } from '@/types';
 
 export const czn: Project = {
   title: "Chaos Zero Nightmare Deck Calculator",
-  categories: ["Frontend", "Tools"], 
+  categories: ["Frontend", "Open-Source", "Tools"], 
   layout: "left",
   description: "A modern frontend application demonstrating advanced engineering principles. It is a dynamic cost calculator for the mobile game <strong>Chaos Zero Nightmare</strong>, providing users with <strong>instantaneous feedback</strong> on deck modifications. The architecture is built on a reactive state management core using <strong>Pinia</strong>, a fully type&#8209;safe codebase with <strong>TypeScript</strong>, and a scalable component&#8209;based design.",
   features: [
