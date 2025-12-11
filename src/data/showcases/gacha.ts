@@ -4,12 +4,12 @@ export const gacha: Project = {
   title: "Case Study: Blue Archive Gacha Simulator",
   categories: ["Full-Stack", "Backend", "Frontend"],
   layout: "left",
-  description: "I built this web application not just once, but multiple times as a personal case study in full&#8209;stack web development. This is a non&#8209;profit, fan&#8209;made project created for fun and educational purposes. The goal was to implement the exact same feature&#8209;rich application using different technology stacks to directly compare their complexities, advantages, and architectural patterns. This exploration covers two primary architectures: a traditional monolithic app and a modern decoupled API&#8209;driven app.",
+  description: "An architectural case study implementing a feature&#8209;rich web application using two distinct design patterns: a classic <strong>monolithic architecture</strong> and a modern, <strong>decoupled API/SPA model</strong>. By engineering the exact same application with different technology stacks, this project serves as a direct comparison of their development complexities, performance characteristics, and deployment strategies.",
 
   versions: [
     {
       title: "1. The Monolithic Full&#8209;Stack App",
-      description: "The original version is a classic server&#8209;side rendered application where Django handles everything: backend logic, database interaction, and frontend template rendering.",
+      description: "A server&#8209;side rendered (SSR) application built with <strong>Django</strong>. In this classic, tightly&#8209;coupled model, the server is responsible for all core functions: backend logic, data persistence, and rendering the HTML frontend.",
       liveUrl: "https://gacha-sim.onrender.com/",
       githubUrl: "https://github.com/catptype/Blue-Archive-Gacha-Simulator-V2",
       techStack: [
@@ -21,7 +21,7 @@ export const gacha: Project = {
     },
     {
       title: "2. The Decoupled API & SPA Architectures",
-      description: "This version follows a modern, API&#8209;driven design. The backend is a pure JSON API, completely separate from the frontend, which is a standalone Single Page Application (SPA).",
+      description: "A modern, API&#8209;driven design that enforces a strict separation of concerns. The backend is a stateless <strong>RESTful API</strong>, while the frontend is a dynamic <strong>Single&#8209;Page Application (SPA)</strong> that consumes it.",
       githubUrl: "https://github.com/catptype/Blue-Archive-Gacha-Simulator-Alternative",
       techStack: [
         {
@@ -38,36 +38,34 @@ export const gacha: Project = {
 
   features: [
     {
-      label: "Realistic Gacha Simulation",
-      text: "Implemented a secure backend service to handle pulls with banner&#8209;specific rates, complete with high&#8209;impact animations for revealing rare characters."
+      label: "Stateless Gacha & Achievement Engine",
+      text: "Engineered stateless service classes to encapsulate all core business logic, creating a clean, testable, and highly maintainable codebase for processing user actions."
     },
     {
-      label: "Asynchronous Dashboard",
-      text: "Developed a dynamic, widget&#8209;based dashboard that uses asynchronous JavaScript to load data widgets independently, preventing page reloads and improving user experience."
+      label: "Asynchronous Widget-Based UI",
+      text: "The dashboard UI shell loads instantly, with each data widget fetching its content concurrently. This parallel, non&#8209;blocking approach creates a highly responsive user experience."
     },
     {
-      label: "Data Visualization",
-      text: "Integrated interactive charts to provide users with a visual breakdown of their gacha history and per&#8209;banner statistics."
+      label: "Database Performance Optimization",
+      text: "Implemented a cache&#8209;aside pattern using <strong>Redis</strong> to intercept frequent data requests, dramatically reducing database load and improving API response times for the dashboard."
     },
     {
-      label: "Optimized Performance with Caching",
-      text: "Implemented a caching layer (using the cache&#8209;aside pattern) to intercept database requests, significantly reducing redundant queries and improving application responsiveness."
+      label: "Live Content Management System",
+      text: "Architected the application to dynamically load all game data from the database, enabling administrators to push content updates in real time without requiring a server restart or redeployment."
     },
     {
-      label: "Zero&#8209;Downtime Content Management",
-      text: "Architected for live content updates, allowing new data to appear on the site instantly after a database update without requiring a server restart or redeployment."
-    },
-    {
-      label: "Dual User Modes",
-      text: "Features a full user authentication system to save all gacha history, achievements, and collections, while also supporting a flexible guest mode for instant access."
+      label: "Secure User & Guest Sessions",
+      text: "Implemented a complete authentication system to manage user&#8209;specific data, while also providing a seamless guest mode for anonymous users."
     }
   ],
   tags: {
     concepts: [
-      "Full&#8209;Stack Development", 
-      "Data Visualization", 
+      "Monolithic Architecture", 
+      "Decoupled Architecture (API/SPA)",
+      "RESTful API Design",
       "Asynchronous Loading", 
-      "User Authentication",
+      "Caching Strategies",
+      "Data Visualization", 
     ],
     infrastructure: [
       "Render"

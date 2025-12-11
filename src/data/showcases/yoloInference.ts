@@ -4,40 +4,28 @@ export const yoloInference: Project = {
   title: "YOLO Inference Toolkit",
   categories: ["AI", "Open-Source", "Tools"],
   layout: "left",
-  description: "I developed this open-source toolkit to solve a common problem for AI developers: the repetitive setup code and complexity of using the powerful Ultralytics YOLO framework. To simplify this, I built a set of intuitive, object-oriented Python classes that provide a clean and consistent workflow for every task. This lets developers get useful, ready-to-use data with a simple predict-then-decode process. The goal is to help developers move from idea to implementation much faster by focusing on their application, not the framework's internal details.",
+  description: "An open&#8209;source, object&#8209;oriented toolkit designed to streamline the developer experience for the <strong>Ultralytics YOLO</strong> framework. This API wrapper abstracts away boilerplate code, enforcing a consistent predict&#8209;then&#8209;decode software pattern across all computer vision tasks. The architecture promotes code reusability and delivers simplified, application&#8209;ready data payloads, enabling developers to accelerate the integration of AI models into their projects.",
 
   features: [
     {
-      label: "Simplify Developer Experience",
-      text: "Abstract away complex framework internals and provide a simple, intuitive API for common AI tasks."
+      label: "Universal YOLO Support",
+      text: "Designed with a model&#8209;agnostic architecture that provides a unified API for all major YOLO tasks, including <strong>classification, object detection, instance segmentation, and pose estimation</strong>."
     },
     {
-      label: "Promote Code Reusability",
-      text: "Use an object-oriented inheritance structure to prevent code duplication and make the toolkit easy to extend."
+      label: "Object-Oriented Architecture",
+      text: "Built on a logical, inheritable class structure that maximizes code reuse and provides a clean, extensible foundation for custom implementations, showcasing a strong software design pattern."
     },
     {
-      label: "Provide Predictable Data",
-      text: "Ensure all decode methods return simple, clean Python data structures (lists, tuples), not complex objects."
+      label: "Consistent Predict → Decode Workflow",
+      text: "Enforces a clear two&#8209;step pattern that decouples model inference from results parsing. This improves code readability and makes batch processing workflows intuitive and efficient."
     },
     {
-      label: "Ensure Versatility",
-      text: "Design a model-agnostic tool that works seamlessly for classification, detection, segmentation, and pose estimation."
+      label: "Application-Ready Data",
+      text: "All methods are engineered to return simplified, native Python data structures (lists, tuples), eliminating the need to parse complex framework objects and making results immediately usable."
     },
     {
-      label: "Model-Agnostic Design",
-      text: "Works with any model type supported by the Ultralytics framework, including classification, detection, segmentation, and pose estimation."
-    },
-    {
-      label: "Simplified Data Output",
-      text: "All decode methods are designed to return simple Python data structures (lists and tuples), not complex framework objects, making the results immediately usable."
-    },
-    {
-      label: "Consistent Predict → Decode Pattern",
-      text: "The entire inference process is streamlined into two clear steps that work identically for both single images and batches."
-    },
-    {
-      label: "Specialized Task Capabilities",
-      text: "Includes ready-to-use methods for advanced tasks like stateful object tracking and utilities to easily extract detected or segmented objects from an image."
+      label: "Built-in Advanced Utilities",
+      text: "Includes pre&#8209;built functionalities for common downstream tasks, such as stateful <strong>object tracking</strong> and helper methods for cropping and extracting detected or segmented objects."
     }
   ],
   tags: {
@@ -45,7 +33,7 @@ export const yoloInference: Project = {
       "Python", "Ultralytics", "Supervision",
     ],
     concepts: [
-      "Object-Oriented Programming", "API Design", "Developer Tool", "Software Architecture"
+      "Object&#8209;Oriented Programming", "API Design", "Developer Tool", "Software Design Patterns"
     ],
   },
   

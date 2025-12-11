@@ -4,41 +4,41 @@ export const pill: Project = {
   title: "Pill Identification System",
   categories: ["AI", "Full-Stack"],
   layout: "left",
-  description: "During my employment, I was the core developer for this real&#8209;time Pill Identification system, which was successfully demonstrated at two public technology events. I was responsible for the entire technical execution, from creating a custom dataset to building the full&#8209;stack architecture and the core AI engine capable of identifying diverse medicine forms—including tablets, capsules, boxes, blisters, and vials.",
+  description: "Development of a high&#8209;fidelity prototype for a real&#8209;time <strong>Pill Identification System</strong>, successfully demonstrated at technology exhibitions. The solution is capable of recognizing diverse pharmaceutical forms—including tablets, capsules, blisters, vials, ampoules, and box packaging",
   responsibilities: [
     {
-      label: "Custom Dataset Curation",
-      text: "With no public dataset available, I single&#8209;handedly photographed, processed, and labeled a comprehensive custom dataset, which formed the foundation of the AI's accuracy."
+      label: "Dataset Generation Strategy",
+      text: "<strong>Generated</strong> a high&#8209;quality proprietary dataset by photographing and labeling company&#8209;provided pharmaceutical samples. Converted physical inventory into a structured digital training set to overcome the complete lack of public data for this specific domain."
     },
     {
-      label: "AI Engine Development",
-      text: "Developed the core computer vision engine using YOLO (Ultralytics) to detect and classify all specified medicine forms, from simple pills to complex packaging."
+      label: "Advanced Computer Vision",
+      text: "<strong>Engineered</strong> a custom vision pipeline using <strong>YOLO</strong> and <strong>OpenCV</strong>. Solved complex recognition challenges such as reading text on boxes, analyzing transparent ampoules, and identifying unique blister pack structures."
     },
     {
-      label: "Full&#8209;Stack System Architecture",
-      text: "Designed the end&#8209;to&#8209;end system and built a robust Django backend, including a functional frontend UI for crucial debugging and visual validation of the AI engine."
+      label: "Full&#8209;Stack Architecture",
+      text: "<strong>Architected</strong> a scalable backend using <strong>Django</strong> and designed internal frontend tools for model debugging and visual validation of inference results."
     },
     {
-      label: "API Integration for Mobile",
-      text: "Engineered and provided a real&#8209;time WebSocket API to the mobile development team, enabling seamless integration into the production application."
+      label: "Backend API Integration",
+      text: "<strong>Engineered</strong> the backend WebSocket architecture to facilitate real&#8209;time, bi&#8209;directional data transfer. <strong>Collaborated</strong> with mobile developers to define communication protocols, enabling the client application to transmit images and visualize AI inference results instantaneously."
     }
   ],
   features: [
     {
-      label: "Multi&#8209;Form Identification",
-      text: "The core feature of the system is its ability to identify medicine in various forms including tablets, capsules, boxes, blisters, ampoules, and vials."
+      label: "Multi&#8209;Form Factor Analysis",
+      text: "Capable of processing a wide variety of pharmaceutical forms. The system supports identification for both individual units (tablets, capsules) and complex packaging types (blisters, vials, ampoules, and boxes).",
     },
     {
-      label: "Fine&#8209;Grained Recognition",
-      text: "The system can distinguish between medicines with nearly identical visual appearances—a task that is challenging for the human eye."
+      label: "Fine&#8209;Grained Differentiation",
+      text: "Achieved high&#8209;level distinction between visually similar medications, successfully differentiating products with identical packaging but distinct chemical compositions.",
     },
     {
-      label: "Robustness to Challenges",
-      text: "Accurately identifies pills even in difficult scenarios, such as when a package contains a non&#8209;uniform mix of pills or includes broken tablets."
+      label: "Anomaly Detection",
+      text: "Implemented robust logic to detect quality control issues, such as identifying broken tablets or flagging cross&#8209;contamination when mixed sizes or colors are detected in a single batch.",
     },
     {
-      label: "Standardized Identification",
-      text: "Utilizes the official Thai Medicines Terminology (TMT) number as a unique identifier, linking every identification to a national standard."
+      label: "Regulatory Standardization",
+      text: "Integrated with the <strong>Thai Medicines Terminology (TMT)</strong> standard to ensure all identification results are mapped to official government reference codes (TPU).",
     }
   ],
   tags: {
@@ -49,6 +49,9 @@ export const pill: Project = {
     ],
     concepts: [
       "Full&#8209;Stack Development", 
+      "Computer Vision",
+      "Data Engineering",
+      "API Design"
     ],
   },
   

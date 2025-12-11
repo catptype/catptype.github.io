@@ -4,28 +4,28 @@ export const tsne: Project = {
   title: "YOLO Dataset Auditor & Visualizer",
   categories: ["AI", "Open-Source", "Tools"],
   layout: "left",
-  description: "I developed this open&#8209;source Python toolkit to solve two critical problems in the AI workflow: finding labeling errors in large datasets and understanding why a model makes its decisions. The tool uses a YOLO model to analyze images, applies machine learning to pinpoint mislabeled data, and generates high&#8209;fidelity heatmaps to reveal the model's internal logic.",
+  description: "An open&#8209;source auditing suite designed to optimize computer vision workflows. Utilizes <strong>Ultralytics YOLO</strong> models and dimensionality reduction (t&#8209;SNE) to visualize dataset clusters, automatically detect labeling anomalies, and provide model interpretability via high&#8209;fidelity heatmaps.",
 
   features: [
     {
-      label: "2D & 3D Dataset Health Check",
-      text: "The tool generates interactive maps of the entire dataset in both 2D and 3D, grouping similar images into colored clusters. This allows developers to rotate and explore the data from different angles to find hidden patterns and instantly see its overall health."
+      label: "Interactive 2D & 3D Visualization",
+      text: "Generates interactive scatter plots that project high&#8209;dimensional feature vectors into 2D and 3D space, enabling developers to visually assess dataset distribution, identify class overlap, and detect outliers.",
     },
     {
-      label: "Error Highlighting",
-      text: "To make finding errors effortless, I designed a Ghost Mode that makes all correctly labeled data points faint and transparent. This causes the few mislabeled data points to stand out as bright, obvious errors in both the 2D and 3D views."
+      label: "Algorithmic Error Detection",
+      text: "Integrated a <strong>k&#8209;Nearest Neighbors (k&#8209;NN)</strong> algorithm to statistically identify class conflicts. Implemented a dynamic rendering technique using <strong>opacity modulation</strong> to visually suppress consistent clusters while emphasizing high&#8209;conflict data points for immediate QA.",
     },
     {
-      label: "Model Interpretability with Heatmaps",
-      text: "To help developers understand why a model makes its decisions, I developed a feature to generate high&#8209;resolution heatmaps. These visualizations show exactly which pixels the AI is focusing on, providing a clear tool for debugging and building trust in the model."
+      label: "Explainable AI (XAI)",
+      text: "Provides deep model interpretability through high&#8209;resolution <strong>Feature Activation Mapping</strong>. Visualizes pixel&#8209;level spatial attention by aggregating neural responses across convolutional layers, revealing exactly which image regions are triggering the model's focus.",
     },
     {
-      label: "Automatic To&#8209;Do List for Fixing Errors",
-      text: "After the analysis, the tool automatically generates a simple CSV file that acts as a to&#8209;do list. It lists every suspicious image, its current label, and what the correct label should be, making the cleaning process fast and efficient."
+      label: "Actionable Reporting",
+      text: "Streamlines data cleaning by converting statistical analysis into prioritized CSV checklists. Automatically flags conflicting images and suggests corrections based on cluster proximity.",
     },
     {
-      label: "Built for Massive Datasets",
-      text: "The tool was designed to be robust. It automatically saves its progress, so if it is interrupted while processing a huge dataset of over 100,000 images, it can be restarted and will resume exactly where it left off without losing any work."
+      label: "Scalable Architecture",
+      text: "Engineered for robust performance on massive datasets (100k+ images). Features an <strong>interrupt&#8209;safe caching system</strong> that preserves processing state, allowing workflows to resume seamlessly without data loss.",
     },
   ],
   tags: {

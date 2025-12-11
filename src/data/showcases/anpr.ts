@@ -4,37 +4,37 @@ export const anpr: Project = {
   title: "Real&#8209;time Vehicle Detection & License Plate Recognition System",
   categories: ["AI", "Full-Stack"], 
   layout: "left",
-  description: "During my role at company, I was the sole developer tasked with designing, building, and deploying the Automatic Number Plate Recognition (ANPR) system from the ground up. I was responsible for the entire project lifecycle, from initial data collection to its final integration as the core technology for a commercial security product. The system performs real‑time vehicle analysis and Thai license plate recognition from live CCTV feeds.",
+  description: "End&#8209;to&#8209;end development of a real&#8209;time <strong>Automatic Number Plate Recognition (ANPR)</strong> system, serving as the core technology for a commercial security product. The solution processes live CCTV feeds to analyze vehicle data and recognize Thai license plates with high accuracy, evolving from a conceptual prototype to a key feature in the <strong>Venus Sentinel</strong> automated barrier platform.",
   responsibilities: [
     {
-      label: "AI Development",
-      text: "Solved the data scarcity problem by building a custom dataset and training YOLO models for vehicle detection, classification, and OCR.",
+      label: "AI Model Engineering",
+      text: "<strong>Engineered</strong> a high&#8209;accuracy computer vision pipeline using <strong>YOLO</strong> and <strong>PyTorch</strong>. Overcame critical data scarcity by developing a custom <strong>dataset generation workflow</strong> to train models for vehicle classification and Thai license plate recognition."
     },
     {
-      label: "Full&#8209;Stack Engineering",
-      text: "Architected and developed the complete application, including a high&#8209;performance multi&#8209;threaded Python backend and a responsive Django&#8209;powered web UI.",
+      label: "Full&#8209;Stack Architecture",
+      text: "<strong>Architected</strong> a scalable solution featuring a multi&#8209;threaded <strong>Python</strong> backend and a responsive <strong>Django</strong> interface. Decoupled video capture, AI inference, and UI broadcasting to ensure non&#8209;blocking, real&#8209;time performance."
     },
     {
-      label: "End&#8209;to&#8209;End Deployment",
-      text: "Managed deployment across different environments, from an optimized edge prototype on a Raspberry Pi 5 to a containerized production build for Linux servers.",
+      label: "Deployment Strategy",
+      text: "<strong>Orchestrated</strong> the deployment lifecycle from optimized edge computing prototypes on <strong>Raspberry Pi 5</strong> to containerized production builds on Linux servers using <strong>Docker</strong>."
     },
     {
-      label: "CI/CD & Infrastructure",
-      text: "Established a GitLab CI/CD pipeline for automated Docker image builds and configured Nginx as a reverse proxy for pre&#8209;production testing.",
+      label: "CI/CD & DevOps",
+      text: "<strong>Established</strong> automated <strong>GitLab CI/CD</strong> pipelines for image generation and configured <strong>Nginx</strong> reverse proxies to simulate production environments for rigorous pre&#8209;deployment testing."
     }
   ],
   features: [
     {
       label: "Integrated Data Labeling Workflow",
-      text: "To enable continuous model improvement, I built a Dataset Mode and a web UI to review, correct, and validate predictions, creating a powerful feedback loop for retraining.",
+      text: "Implemented a &quot;Dataset Mode&quot; with a built&#8209;in web UI to review, correct, and validate AI predictions, creating a <strong>continuous feedback loop</strong> that systematically improves model accuracy over time.",
     },
     {
-      label: "High&#8209;Performance Multi&#8209;Threading",
-      text: "The backend pipeline is fully concurrent to ensure real&#8209;time performance without bottlenecks.",
+      label: "Real&#8209;Time Monitoring Dashboard",
+      text: "Delivered a responsive interface using <strong>WebSockets</strong> to push live video feeds, detection results, and system health metrics instantly to operators on both desktop and mobile devices.",
     },
     {
       label: "Commercial Integration",
-      text: `The final application was architected for a dual role: providing a staff&#8209;only UI for configuration and serving detection data to the central <a href="https://bgs.co.th/venus-sentinel-ระบบไม้กั้นอัตโนมัติ/" class="font-semibold text-blue-600 hover:text-blue-700">Venus Sentinel</a> platform via a REST API to control automated gate barriers.`,
+      text: `Designed the system to function as a headless AI engine, exposing detection data via a <strong>REST API</strong> to trigger automated barriers within the <a href="https://bgs.co.th/venus-sentinel-ระบบไม้กั้นอัตโนมัติ/" class="font-semibold text-blue-600 hover:text-blue-700">Venus Sentinel</a> commercial platform.`,
     },
   ],
   tags: {
@@ -47,7 +47,7 @@ export const anpr: Project = {
       "Full&#8209;Stack Development", 
       "RESTful API", 
       "Multi&#8209;threading", 
-      "Edge Computing",
+      "Computer Vision",
     ],
     infrastructure: [
       "Docker", "Gitlab CI/CD", "Nginx", "Raspberry Pi"

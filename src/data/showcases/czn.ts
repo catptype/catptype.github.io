@@ -4,23 +4,23 @@ export const czn: Project = {
   title: "Chaos Zero Nightmare Deck Calculator",
   categories: ["Frontend", "Tools"], 
   layout: "left",
-  description: "I built this modern web application to demonstrate my skills in component&#8209;based frontend architecture. The tool provides real&#8209;time cost tracking for deck modifications in the game Chaos Zero Nightmare and is built entirely with a modern Vue.js stack, ensuring a fast, responsive, and type&#8209;safe user experience.",
+  description: "A modern frontend application demonstrating advanced engineering principles. It is a dynamic cost calculator for the mobile game <strong>Chaos Zero Nightmare</strong>, providing users with <strong>instantaneous feedback</strong> on deck modifications. The architecture is built on a reactive state management core using <strong>Pinia</strong>, a fully type&#8209;safe codebase with <strong>TypeScript</strong>, and a scalable component&#8209;based design.",
   features: [
     {
-      label: "Reactive State Management",
-      text: "The core of the application is a reactive calculation engine powered by a central Pinia store. This single source of truth architecture enables real&#8209;time cost updates across multiple decks and a full Undo system.",
+      label: "Centralized State Management & Logic",
+      text: "Engineered a reactive calculation engine using a centralized <strong>Pinia</strong> store as the single source of truth. All business logic and data mutations are handled within the store, ensuring predictable state changes and instantaneous UI updates."
     },
     {
-      label: "Type&#8209;Safe Codebase with TypeScript",
-      text: "The entire project is written in TypeScript, leveraging static typing to create a robust, scalable, and maintainable application with fewer runtime errors.",
+      label: "Multi-Deck State Synchronization",
+      text: "Manages the complex state of up to three independent decks simultaneously. The application's core logic correctly synchronizes actions across all decks to reflect a global cost, demonstrating sophisticated state management."
     },
     {
-      label: "Component&#8209;Based Architecture",
-      text: "The UI is built with a modern, component&#8209;based approach, breaking the interface down into small, reusable components to ensure a clean and scalable codebase.",
+      label: "Scalable Component Architecture",
+      text: "Built with a strict component&#8209;based structure and a fully type&#8209;safe <strong>TypeScript</strong> codebase. Implemented a dynamic data loader that automatically discovers and registers new presets, making the application highly maintainable and easy to extend."
     },
     {
-      label: "Internationalization",
-      text: "The application was built from the ground up with full language support, with all user&#8209;facing strings managed in locale files for easy translation (currently supporting English & Japanese).",
+      label: "Designed for a Global Audience",
+      text: "Features a complete internationalization (i18n) system powered by <strong>Vue I18n</strong>. The UI is language&#8209;agnostic, with all user&#8209;facing text managed in locale files for seamless translation (EN & JP supported)."
     },
   ],
   tags: {
@@ -29,10 +29,10 @@ export const czn: Project = {
       "HTML", "CSS", "JavaScript", "Tailwind CSS",
     ],
     concepts: [
-      "Frontend Development", 
+      "Advanced Frontend Architecture", 
       "State Management", 
       "Internationalization (i18n)", 
-      "Component Architecture", 
+      "Component Based Design", 
     ],
     infrastructure: [
       "Vercel"

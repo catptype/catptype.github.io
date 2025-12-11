@@ -4,20 +4,20 @@ export const portfolio: Project = {
   title: "Pawin Web Portfolio",
   categories: ["Frontend"],
   layout: "left",
-  description: "This project represents the strategic refactoring of my personal portfolio from a static, hardcoded HTML file into a scalable, component&#8209;driven Single Page Application (SPA). The goal was to solve maintenance bottlenecks by decoupling content from code. By leveraging <strong>Vue 3</strong> and <strong>TypeScript</strong>, I established a type&#8209;safe data structure that allows for easy addition of new projects and skills without touching the UI layer. The architecture includes reusable components for complex layouts and a global state&#8209;managed lightbox.",
+  description: "The architectural overhaul of this personal portfolio, migrating it from a static HTML file to a dynamic, component&#8209;driven Single Page Application (SPA). The primary engineering goal was to solve maintainability bottlenecks by establishing a type&#8209;safe content schema with <strong>TypeScript</strong> and decoupling data from presentation using <strong>Vue 3</strong>. The result is a highly scalable and easily updatable platform.",
 
   features: [
     {
-      label: "Type&#8209;Safe Data Management",
-      text: "Migrated loose HTML content into structured TypeScript interfaces, preventing runtime errors and ensuring consistent layout rendering across all project cards."
+      label: "Decoupled Content Schema",
+      text: "Established a strict, type&#8209;safe content schema using <strong>TypeScript</strong> interfaces. This design decouples all project data from the UI, allowing new content to be added via a central data source without modifying the presentation layer."
     },
     {
-      label: "Modular Component Design",
-      text: "Designed flexible, reusable Vue components that handle various content patterns (standard lists, nested case studies, info blocks) dynamically."
+      label: "Reusable Component Library",
+      text: "Developed a library of modular, single&#8209;responsibility <strong>Vue</strong> components designed to dynamically render complex and varied layouts, ensuring UI consistency and accelerating future development."
     },
     {
-      label: "Automated Deployment",
-      text: "configured a GitHub Actions pipeline to automatically build and deploy the optimized Vite application to GitHub Pages upon every push."
+      label: "CI/CD Pipeline for Automated Deployment",
+      text: "Implemented a full CI/CD pipeline using <strong>GitHub Actions</strong>. The workflow automatically builds the <strong>Vite</strong> application and deploys the optimized static assets to GitHub Pages on every commit, ensuring a seamless and error&#8209;free release process."
     }
   ],
 
