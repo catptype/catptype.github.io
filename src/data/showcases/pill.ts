@@ -3,7 +3,7 @@ import type { Project } from '@/types';
 export const pill: Project = {
   title: "Pill Identification System",
   categories: ["AI", "Full-Stack"],
-  layout: "right",
+  layout: "left",
   description: "During my employment, I was the core developer for this real&#8209;time Pill Identification system, which was successfully demonstrated at two public technology events. I was responsible for the entire technical execution, from creating a custom dataset to building the full&#8209;stack architecture and the core AI engine capable of identifying diverse medicine forms—including tablets, capsules, boxes, blisters, and vials.",
   responsibilities: [
     {

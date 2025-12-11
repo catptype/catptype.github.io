@@ -3,7 +3,7 @@ import type { Project } from '@/types';
 export const portfolio: Project = {
   title: "Pawin Web Portfolio",
   categories: ["Frontend"],
-  layout: "right",
+  layout: "left",
   description: "This project represents the strategic refactoring of my personal portfolio from a static, hardcoded HTML file into a scalable, component&#8209;driven Single Page Application (SPA). The goal was to solve maintenance bottlenecks by decoupling content from code. By leveraging <strong>Vue 3</strong> and <strong>TypeScript</strong>, I established a type&#8209;safe data structure that allows for easy addition of new projects and skills without touching the UI layer. The architecture includes reusable components for complex layouts and a global state&#8209;managed lightbox.",
 
   features: [

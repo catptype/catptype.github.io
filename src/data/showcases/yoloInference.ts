@@ -3,7 +3,7 @@ import type { Project } from '@/types';
 export const yoloInference: Project = {
   title: "YOLO Inference Toolkit",
   categories: ["AI", "Open-Source", "Tools"],
-  layout: "bottom",
+  layout: "left",
   description: "I developed this open-source toolkit to solve a common problem for AI developers: the repetitive setup code and complexity of using the powerful Ultralytics YOLO framework. To simplify this, I built a set of intuitive, object-oriented Python classes that provide a clean and consistent workflow for every task. This lets developers get useful, ready-to-use data with a simple predict-then-decode process. The goal is to help developers move from idea to implementation much faster by focusing on their application, not the framework's internal details.",
 
   features: [
