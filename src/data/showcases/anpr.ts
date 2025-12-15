@@ -8,7 +8,7 @@ export const anpr: Project = {
   responsibilities: [
     {
       label: "AI Model Engineering",
-      text: "<strong>Engineered</strong> a high&#8209;accuracy computer vision pipeline using <strong>YOLO</strong> and <strong>PyTorch</strong>. Overcame critical data scarcity by developing a custom <strong>dataset generation workflow</strong> to train models for vehicle classification and Thai license plate recognition."
+      text: "<strong>Engineered</strong> a high&#8209;accuracy computer vision pipeline using <strong>YOLO</strong>. Overcame critical data scarcity by developing a custom <strong>dataset generation workflow</strong> to train models for vehicle classification and Thai license plate recognition."
     },
     {
       label: "Full&#8209;Stack Architecture",
