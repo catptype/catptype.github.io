@@ -33,10 +33,9 @@ export const deeplearning: Project = {
       "Python", "TensorFlow", "Keras",
     ],
     concepts: [
-      "Implementation from First Principles", 
       "Object&#8209;Oriented Design",
       "Computer Vision Fundamentals", 
-      "Academic Research Implementation"
+      "Implementation from Research Paper"
     ],
   },
   
