@@ -102,14 +102,14 @@
   >
     
     <!-- ==================== VIEW 1: MINI CARD (COLLAPSED) ==================== -->
-    <div v-if="!isExpanded" class="flex flex-col md:flex-row h-full">
+    <div v-if="!isExpanded" class="flex flex-col md:flex-row h-[340px]">
       
       <!-- Cover Image (First screenshot) -->
-      <div class="md:w-1/4 h-48 md:h-auto relative overflow-hidden bg-slate-100">
+      <div class="md:w-2/4 h-48 md:h-auto relative overflow-hidden bg-slate-100">
         <img 
           v-if="project.images && project.images.length > 0"
           :src="project.images[0]" 
-          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          class="w-full h-full object-contain transition-transform duration-500"
           alt="Project Cover" 
         />
         <!-- Overlay hint -->
@@ -117,7 +117,7 @@
       </div>
 
       <!-- Summary Content -->
-      <div class="p-6 md:w-3/4 flex flex-col justify-between">
+      <div class="p-6 md:w-2/4 flex flex-col justify-between">
         <div>
           <!-- Category Badges -->
           <div class="flex flex-wrap gap-2 mb-2">
